@@ -1,0 +1,8 @@
+:root{
+     --color-bg: #FFF8E9;
+     --color-red: #BF0D12;
+     --color-black: #1E1E1E;
+     --color-white: #fff;
+
+     --transition: all 400ms ease
+}
