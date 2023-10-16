@@ -1,0 +1,25 @@
+{
+  "name": "online-wine-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"json-server --watch database.json",
+    "server":"node server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srudhi6383/Online-Wine-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srudhi6383/Online-Wine-shop/issues"
+  },
+  "homepage": "https://github.com/srudhi6383/Online-Wine-shop#readme",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
