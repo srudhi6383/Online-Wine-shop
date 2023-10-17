@@ -1,0 +1,627 @@
+
+.text{
+    font-family: 'PT Mono';
+}
+
+.text-nunito{
+    font-family: 'Nunito';
+    opacity: 0.8;
+}
+
+#head-title{
+    font-size: 80px;
+}
+
+#body{
+    background-color: #fff8e9;
+    margin: 10px;
+}
+
+
+/* Product Sliding Start */
+.slider {
+    width: 100%;
+    /* height: 520px; */
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.slides {
+    width: 700%;
+    /* height: 350px; */
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+
+.slide {
+    width: 14.28%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 650px;
+}
+
+.slide img:hover{
+    cursor: pointer;
+}
+
+#radio1:checked~#MakeItSlide {
+    margin-left: 0;
+}
+
+#radio2:checked~#MakeItSlide {
+    margin-left: -14.28%;
+}
+
+#radio3:checked~#MakeItSlide {
+    margin-left: -28.56%;
+}
+
+/* Product Sliding End */
+
+
+/* Different Wines Start */
+#wine-category{
+    display: flex;
+    text-align: center;
+    margin-left: 3%;
+}
+
+#wine-category div{
+    border: 1px solid;
+    border-left: 0;
+}
+
+#wine-category div:nth-child(1){
+    border-left: 1px solid;
+}
+
+.wine img{
+    width: 100%;
+    /* height: 350px; */
+    cursor: pointer;
+}
+/* Different Wines End */
+
+/* Sets and Gifts Start */
+#gifts {
+    display: flex;
+    gap: 20px;
+}
+
+#gifts img{
+    width: 100%;
+    height: 75%;
+}
+
+#sets-gifts-btn{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#sets-gifts-btn button{
+    background: none;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#sets-gifts-btn button:hover{
+    background-color: black;
+    color: #fff8e9;
+    transition: 0.5s;
+}
+
+.right-arrow{
+    content: "\27F6";
+    font-stretch: extra-expanded;
+}
+/* Sets and Gifts End */
+
+/* Options Start */
+#options{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#options h3{
+    opacity: 0.5;
+}
+
+#options h3:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.rating_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.appended-items{
+    border: 1px solid;
+    border-left: 0;
+    padding: 10px;
+}
+
+.appended-items:first-child{
+    border-left: 1px solid;
+}
+
+.product-code{
+    opacity: 0.5;
+    margin-top: -10px;
+}
+
+.special-items img{
+    width: 100%;
+} 
+
+#options-append{
+    display: flex;
+}
+
+.sets-gifts-btn{
+    margin-top: 20px;
+}
+
+.country-div{
+    display: flex;
+    font-size: smaller;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+.price-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.price-div-button{
+    background: none;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    color: #bf0d12;
+    border-color: #bf0d12;
+}
+
+.price-div-button:hover{
+    cursor: pointer;
+    color: #fff8e9;
+    background-color: #bf0d12;
+    transition: 0.5s;
+}
+
+/* Options End */
+
+/* Wine Subscription Start */
+
+.main-wine-subscription{
+    display: flex;
+    border: 1px solid;
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+#wine-subscription-text-content{
+    margin-top: 8%;
+}
+
+#wine-subscription-text-content p{
+    width: 80%;
+}
+
+#image-and-content{
+    display: flex;
+}
+
+#subscription-img img{
+    width: 100%;
+}
+
+#wine-subscription-btn{
+    background: none;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#wine-subscription-btn:hover{
+    background-color: black;
+    color: #fff8e9;
+    transition: 0.5s;
+}
+
+#first-vertical-div{
+    color: #bf0d12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border: 1px solid rgb(67, 67, 67);
+    border-top: 0;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+#second-vertical-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border: 1px solid rgb(67, 67, 67);
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    cursor: pointer;
+}
+
+#third-vertical-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+/* Wine Subscription End  */
+
+/* Blogs and news Start */
+#blog-and-news{
+    margin-top: 5%;
+}
+
+#blogs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.blog-and-news-div img{
+    cursor: pointer;
+    width: 100%;
+}
+
+.blog-and-news-div p{
+    margin-top: -4px;
+    margin-bottom: -15px;
+}
+
+#see-all-articles{
+    background-image: url("../Assets/see all articles.jpg");
+    width: 78%;
+    height: 38%;
+    padding-top: 15%;
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 40px;
+    transition: 1.5s;
+}
+
+#see-all-articles:hover{
+    transform: rotateY(180deg);
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+#continue{
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+#continue:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+#blogs2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+#final-two{
+    display: flex;
+    gap: 30px;
+}
+/* Blog and News End */
+
+/* Instagram Start */
+#insta-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#insta-header p{
+    opacity: 0.7;
+}
+
+#instagram{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+#instagram img{
+    width: 100%;
+}
+
+#mine-wine:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+/* Instagram End */
+
+/* Media Queries Start */
+
+
+
+@media only screen and (max-width: 900px){
+    #head-title{
+        font-size: 75px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 550px;
+        transition: 0.5s;
+    }
+
+    #wine-category{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #wine-category div:nth-child(4){
+        display: none;
+    }
+
+    #gifts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #gifts div:nth-child(3){
+        display: none;
+    }
+
+    #options{
+        width: 90%;
+    }
+
+    #options-append{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #options-append div:nth-child(4){
+        display: none;
+    }
+
+    .main-wine-subscription{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #wine-subscription-btn{
+        margin-bottom: 3%;
+    }
+
+    #image-and-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #first-vertical-div{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        border: 1px solid rgb(67, 67, 67);
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        justify-content: space-around;
+    }
+    #second-vertical-div{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        border: 1px solid rgb(67, 67, 67);
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        justify-content: space-around;
+    }
+    #third-vertical-div{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        border: 1px solid rgb(67, 67, 67);
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        justify-content: space-around;
+    }
+
+    #blogs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    #blogs div:nth-child(4){
+        display: none;
+    }
+
+    #blogs2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #blogs2 > div:nth-child(1){
+        display: none;
+    }
+
+    #instagram{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    #instagram div:nth-child(4){
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .slide img {
+        width: 100%;
+        height: 500px;
+        transition: 0.5s;
+    }
+
+    #wine-category{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #wine-category div:nth-child(3){
+        display: none;
+    }
+    #wine-category div:nth-child(4){
+        display: none;
+    }
+
+    #options-append{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #options-append div:nth-child(3){
+        display: none;
+    }
+
+    #options-append div:nth-child(4){
+        display: none;
+    }
+
+    #blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #blogs div:nth-child(3){
+        display: none;
+    }
+
+    #blogs div:nth-child(4){
+        display: none;
+    }
+
+    #instagram{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #instagram div:nth-child(3){
+        display: none;
+    }
+
+    #instagram div:nth-child(4){
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .slide img {
+        width: 100%;
+        height: 450px;
+        transition: 0.5s;
+    }
+
+    #options div:nth-child(4){
+        display: none;
+    }
+
+    #blogs{
+        display: none;
+    }
+
+    #blogs2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #blogs2 > div:nth-child(1){
+        display: none;
+    }
+
+    #final-two div:nth-child(2){
+        display: none;
+    }
+
+    #see-all-articles{
+        width: 100%;
+        padding-top: 45%;
+        margin-bottom: 20%;
+        color: white;
+        padding-left: 40px;
+        transition: 1.5s;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .slide img {
+        width: 100%;
+        height: 350px;
+        transition: 0.5s;
+    }
+    #options div:nth-child(3){
+        display: none;
+    }
+    #options div:nth-child(4){
+        display: none;
+    }
+    
+}
