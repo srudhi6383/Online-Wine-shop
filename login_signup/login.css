@@ -1,0 +1,9 @@
+#login_container {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+}
+#login_container img {
+  width: 100%;
+}
