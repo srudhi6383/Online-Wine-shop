@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css " rel="stylesheet">
+    <link href="./styles/cart.css" rel="stylesheet">
+    <link href="./styles/navbar.css" rel="stylesheet">
+    <link href="./styles/footer.css" rel="stylesheet">
+    <title>Cart</title>
+
+</head>
+<style>
+    /* for cart  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: interregular, sans-serif, monospace, arial, helvetica neue,
+    helvetica, arial, geneva, times new roman;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+/* cart */
+
+#cart-container {
+  overflow-x: auto;
+}
+#cart-container table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+#cart-container table thead {
+  font-weight: 700;
+}
+#cart-container table thead td {
+  background-color: #f8c808;
+  color: black;
+  border: none;
+  padding: 6px 0;
+}
+#cart-container table thead td {
+  /* border: 1px solid rgb(138, 133, 133); */
+  text-align: center;
+}
+#cart-container table td:nth-child(1),
+#cart-container table td:nth-child(2) {
+  width: 250px;
+}
+
+</style>
+<body>
+    <div id="main-container">
+        <div id="navbar">
+
+        </div>
+
+        <!-- cart items -->
+        <div id="cart-container">
+            <section id="heading">
+                <h2 style="text-align: center;margin-top: 20px;">Shopping Cart</h2>
+                <hr>
+            </section>
+            <section id="cart-container">
+                <table width="100%" class="container my-5">
+                    <thead>
+                        <tr>
+                            <td>Product Image</td>
+                            <td>Product</td>
+                            <td>Quantity</td>
+                            <td>Original Price</td>
+                            <td>Discount Price</td>
+                            <td>Remove</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>
+                                <div id="Image">
+                                    <img src="https://th.bing.com/th/id/OIP.hDJJ_FMheSBDEIhsU4b7igHaFj?w=237&h=180&c=7&r=0&o=5&pid=1.7">
+                                </div>
+                            </td>
+                            <td><h5>Break pad</h5></td>
+                            <td><input type="number" class="w-25 pl-1" value="1"></td>
+                            <td><h5>2500 Rs</h5></td>
+                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                            <td><h5>2500 Rs</h5></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="Image">
+                                    <img src="https://th.bing.com/th/id/OIP.U8j_zjLYk6YE_TLvf_zeMAHaHa?w=171&h=180&c=7&r=0&o=5&pid=1.7">
+                                </div>
+                            </td>
+                            <td><h5>Break pad</h5></td>
+                            <td><input type="number" class="w-25 pl-1" value="1"></td>
+                            <td><h5>2500 Rs</h5></td>
+                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                            <td><h5>2500 Rs</h5></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="Image">
+                                    <img src="https://th.bing.com/th/id/OIP.hDJJ_FMheSBDEIhsU4b7igHaFj?w=237&h=180&c=7&r=0&o=5&pid=1.7">
+                                </div>
+                            </td>
+                            <td><h5>Break pad</h5></td>
+                            <td><input type="number" class="w-25 pl-1" value="1"></td>
+                            <td><h5>2500 Rs</h5></td>
+                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                            <td><h5>2500 Rs</h5></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section id="cart-bottom" class="container" style="display: none;">
+                <!-- <div class="row">
+                    <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+                        <div>
+                            <h5>COUPON</h5>
+                            <p>Enter your coupon code</p>
+                            <input type="text" placeholder="Coupon Code">
+                            <button>Apply Coupon</button>
+                        </div>
+                    </div>
+                    <div class="total col-lg-6 col-md-6 col-12" >
+                        <div>
+                            <h5>Cart Total</h5>
+                            <div class="d-flex justify-content-between">
+                                <h6>Subtotal</h6>
+                                <p></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h6>Delivery Charges</h6>
+                                <p></p>
+                            </div>
+                            <hr class="second-hr">
+                            <div class="d-flex justify-content-between">
+                                <h6>Total</h6>
+                                <p></p>
+                            </div>
+                            <button id="Checkout">Proceed To CheckOut </button>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+            <!-- for popup -->
+            <div class="popup" id="popup">
+                <img src="./img/tickimage.jpg" alt="">
+                <h2>Thank You</h2>
+                <p>Coupon Applied Successfully.</p>
+                <button type="button" id="ok_btn">Ok</button>
+            </div>
+
+            <!-- for wrong code -->
+            <div class="popup" id="popup1">
+                <img src="./img/Wrong-PNG-Image.png" alt="">
+                <h2>Invalid Coupon Code ! </h2>
+                <button type="button" id="ok_btn1">Ok</button>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+
+
+</body>
+</html>
