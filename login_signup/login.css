@@ -1,9 +1,67 @@
+body {
+  font-family: "PT Mono", monospace;
+  background-color: rgb(255, 248, 233);
+}
 #login_container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
+  /* background-color: rgb(255, 248, 233); */
 }
 #login_container img {
   width: 100%;
+}
+.loginMainDiv {
+  /* border: 1px sold red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px; */
+}
+
+#picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 75%;
+  gap: 10px;
+  margin: auto;
+}
+#picture img {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+h1 {
+  text-align: center;
+  color: rgb(31, 30, 31);
+}
+p {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-rows: repeat(1, fr);
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+}
+
+form > input {
+  padding: 10px;
+}
+form > button {
+  padding: 10px;
+}
+
+.createAccount {
+  color: rgb(83, 84, 84);
+  cursor: pointer;
+}
+#para{
+  margin-top: 0px;
 }
