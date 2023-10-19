@@ -1,17 +1,10 @@
-let form = document.querySelector("#form");
-console.log(form);
-
-//------------------------FireBase------------------------>>
-
-// Import the functions you need from the SDKs you need
+//------------------------FireBase (Don not touch)------------------------>>
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-// import {
-//   getAuth,
-//   createUserWithEmailAndPassword,
-// } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDOBN2ZFzwyGEUh0xRo0wknf6Nt_FYvHnc",
@@ -21,30 +14,53 @@ const firebaseConfig = {
   messagingSenderId: "159304889680",
   appId: "1:159304889680:web:9ec1ddf74a3639a812a855",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log(app);
+//------------------------FireBase (Don not touch)------------------------>>
 
-const auth = getAuth();
+//--------------------SignUp form starts here ------------------>>
+// let signForm = document.querySelector("#loginForm");
+// signForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const email = event.target.email.value;
+//   const password = event.target.password.value;
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let email = e.target.email.value;
-  let password = e.target.password.value;
-  createUserWithEmailAndPassword(auth, email, password)
+//   //---SignUp with firebase starts here--->>
+//   const auth = getAuth();
+//   createUserWithEmailAndPassword(auth, email, password)
+//     .then((userCredential) => {
+//       const user = userCredential.user;
+//       // console.log(user);
+//       alert("user had signedup successfully");
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       alert("user credentials are wrong");
+//     });
+//   //---SignUp with firebase ends here--->>
+// });
+//--------------------SignUp form Ends here ------------------>>
+
+//-------------------Sign in with email and password-------->>
+let loginForm = document.querySelector("#loginForm");
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = event.target.email.value;
+  const password = event.target.password.value;
+
+  //---SignIn with firebase starts here--->>
+  const auth = getAuth();
+  signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed up
       const user = userCredential.user;
-      console.log(user);
-      // ...
+      alert("user had Loggged in successfully");
+      window.location = "./index.html";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+      alert("email and password is wrong");
     });
-  console.log(auth);
+  //---SignIn with firebase ends here--->>
 });
-
-// Import the functions you need from the SDKs you need

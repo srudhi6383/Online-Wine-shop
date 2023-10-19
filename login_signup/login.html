@@ -26,15 +26,16 @@
         <div class="loginMainDiv">
           <h1>Mine Wine</h1>
           <p>Welcome back! Sign in with</p>
-          <div id="picture">
-            <div>
-              <img src="./LoginImages/facebook.png" alt="facebook" />
+
+          <form id="loginForm" autocomplete="off">
+            <div id="picture">
+              <div>
+                <img src="./LoginImages/facebook.png" alt="facebook" />
+              </div>
+              <div>
+                <img src="./LoginImages/google.jpg" alt="Google" />
+              </div>
             </div>
-            <div>
-              <img src="./LoginImages/google.webp" alt="Google" />
-            </div>
-          </div>
-          <form id="form">
             <input type="email" placeholder="Enter Your Email" id="email" />
             <input
               type="password"
@@ -44,7 +45,9 @@
             <button type="submit">SIGN IN</button>
           </form>
           <p>Forgot password</p>
-          <p id="para">New here? <span class="createAccount">Create an account</span></p>
+          <p id="para">
+            New here? <span class="createAccount">Create an account</span>
+          </p>
         </div>
       </div>
     </div>

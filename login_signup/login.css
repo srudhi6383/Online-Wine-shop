@@ -23,12 +23,12 @@ body {
 
 #picture {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   /* border: 1px solid red; */
-  width: 75%;
+  width: 100%;
   gap: 10px;
-  margin: auto;
+  /* margin: auto; */
 }
 #picture img {
   width: 100%;
@@ -43,7 +43,7 @@ p {
   text-align: center;
 }
 
-form {
+#loginForm {
   display: grid;
   grid-template-rows: repeat(1, fr);
   width: 80%;
@@ -51,10 +51,10 @@ form {
   gap: 20px;
 }
 
-form > input {
+#loginForm > input {
   padding: 10px;
 }
-form > button {
+#loginForm > button {
   padding: 10px;
 }
 
@@ -62,6 +62,20 @@ form > button {
   color: rgb(83, 84, 84);
   cursor: pointer;
 }
-#para{
+#para {
   margin-top: 0px;
+}
+
+@media screen and (width<1000px) {
+  #login_container {
+    grid-template-columns: repeat(1, 1fr);
+    /* border: 1px solid red; */
+  }
+  #login_container > div:first-child {
+    display: none;
+  }
+  #login_container > div:nth-child(2) {
+    max-width: 600px;
+    margin: auto;
+  }
 }
