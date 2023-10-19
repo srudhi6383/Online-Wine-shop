@@ -1,0 +1,155 @@
+#header{
+  font-family: 'PT Mono';
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+#ua{
+  opacity: 0.6;
+}
+
+#hr{
+  border-width: 1px;
+  border-color: #1e1e1e;
+}
+
+#navbar{
+    width: 100%;
+    padding-top: 0px;
+    background-color: #fff8e9;
+    margin-top: 0;
+  }
+   #upper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'PT Mono';
+   }
+
+   #symbols{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2%;
+   }
+
+   #symbols a{
+    cursor: pointer;
+    color: #1e1e1e;
+   }
+   
+   .main-header{
+    display: flex;
+    align-items: center;
+}
+
+
+.header-options-div{
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.header-options-div-two{
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.header-options-div p{
+  cursor: pointer;
+  opacity: 0.7;
+  transform: 0.5s;
+}
+
+.header-options-div a{
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.header-options-div p:hover{
+  opacity: 1;
+  transform: 0.5s;
+}
+
+.header-options-div-two{
+  display: none;
+}
+
+.header-options-div-two p{
+  cursor: pointer;
+  opacity: 0.7;
+  transform: 0.5s;
+}
+
+.header-options-div-two a{
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.header-options-div-two p:hover{
+  opacity: 1;
+  transform: 0.5s;
+}
+
+.invisible-hr{
+  display: none;
+}
+
+.start-typing-to-search{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-typing-to-search input{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 45px;
+  border: none;
+  background: none;
+}
+
+.start-typing-to-search input:focus{
+  outline: none;
+}
+
+@media only screen and (max-width: 1450px){
+  .header-options-div{
+    display: none;
+    transition: 0.8s;
+  }
+
+  .header-options-div-two{
+    transition: 0.8s;
+    display: flex;
+    width: 96%;
+  }
+
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .invisible-hr{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .header-options-div-two a:nth-child(5){
+    display: none;
+  }
+  
+  .header-options-div-two a:nth-child(6){
+    display: none;
+  }
+
+}
+    

@@ -1,0 +1,155 @@
+footer{
+    font-family: 'PT Mono';
+        }
+#main{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'PT Mono';
+}
+#main p{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#main p:hover{
+    opacity: 1;
+}
+#subscribe-to-our-newsletter{
+    font-size: 20px;
+}
+#last{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#Wine{
+    width: 50%;
+    font-size: 120px;
+}
+/* #text{
+    
+    float: right;
+    margin-left: 450px;
+    font-size: 10px;
+    margin-top:40px ;
+ } */
+
+ #send-mail{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+
+ #example{
+    border: none;
+    background: none;
+ }
+
+ #example:focus{
+    outline: none;
+ }
+
+ .hr-one{
+    margin-top: 2%;
+ }
+
+ #mail-submission-success-overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+    color: #1e1e1e;
+    transition: 2s;
+}
+
+#mail-submission-success-overlay > div {
+    font-size: 20px;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    margin: 5% auto;
+    background-color: #fff8e9;
+    border-radius: 15px;
+}
+
+#hide-overlay {
+    color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    border-radius: 10px;
+    width: 45%;
+    margin: auto;
+    /* height: 40px; */
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+#hide-overlay:hover {
+    cursor: pointer;
+    background-color: #1e1e1e;
+    color: #fff8e9;
+}
+
+@media only screen and (max-width: 1000px){
+    #main div:nth-child(4){
+        display: none;
+    }
+
+    #Wine{
+        font-size: 100px;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px){
+    #main > div:nth-child(3){
+        display: none;
+    }
+
+    #main div:nth-child(4){
+        display: none;
+    }
+
+    #Wine{
+        font-size: 70px;
+    }
+
+    /* #last{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
+    } */
+}
+
+@media only screen and (max-width: 500px){
+    #main > div:nth-child(2){
+        display: none;
+    }
+    
+    #main > div:nth-child(3){
+        display: none;
+    }
+    
+    #main div:nth-child(4){
+        display: none;
+    }
+
+    #Wine{
+        font-size: 50px;
+    }
+}
