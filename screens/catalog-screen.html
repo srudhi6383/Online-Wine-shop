@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalog</title>
-
+    <!-- =============== CSS file ==================-->
+    <link rel="stylesheet" href="/styles/catalog.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <!-- ==================== Font Family ===================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +14,242 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&family=PT+Mono&display=swap"
       rel="stylesheet"
     />
-     
+
+    <!-- ============== Icon CDN =================== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- ================== START OF NAVBAR ====================== -->
+    <nav></nav>
+    <!-- ================== END OF NAVBAR ====================== -->
+
+    <!-- ================== START OF PRODUCTS ====================== -->
+    <div class="container">
+      <h1>Catalog</h1>
+      <!-- ==================== START OF CONTENT CONTAINER =================== -->
+
+      <div class="content__container">
+        <!-- ==================== START OF FILTER =================== -->
+        <div class="filter__container">
+          <div class="filter__heading">
+            <h2>Filters</h2>
+          </div>
+
+          <!-- =========== start price ========== -->
+          <div class="filter__price flex-jsbetween filter-div">
+            <span>Price</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div price_list hide" id="priceList"></ul>
+          <!-- =========== end price ========== -->
+
+          <!-- =========== start category ========== -->
+          <div class="filter__category filter-div flex-jsbetween">
+            <span>Catagory</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div category-list hide" id="categoryList"></ul>
+          <!-- =========== end category ========== -->
+
+          <!-- =========== start Type ============ -->
+          <div class="filter__type filter-div flex-jsbetween">
+            <span>Type</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div type-list hide" id="typeList"></ul>
+          <!-- =========== end Type ============ -->
+
+          <!-- =========== start body ============ -->
+          <div class="filter__body filter-div flex-jsbetween">
+            <span>Body</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div body-list hide" id="bodyList"></ul>
+          <!-- =========== end body ============ -->
+
+          <!-- =========== start rating ============ -->
+          <div class="filter__rating filter-div flex-jsbetween">
+            <span>Rating</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div rating-list hide" id="ratingList"></ul>
+          <!-- =========== end rating ============ -->
+
+          <!-- =========== start country ============ -->
+          <div class="filter__country filter-div flex-jsbetween">
+            <span>Country of origin</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div country-list hide" id="countryList"></ul>
+          <!-- =========== end country ============ -->
+
+          <!-- =========== start brand ============ -->
+          <div class="filter__brand filter-div flex-jsbetween">
+            <span>Brand</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div brand-list hide" id="brandList"></ul>
+          <!-- =========== end brand ============ -->
+
+          <!-- =========== start region ============ -->
+          <div class="filter__region filter-div flex-jsbetween">
+            <span>Region</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div region-list hide" id="regionList"></ul>
+          <!-- =========== end region ============ -->
+
+          <!-- =========== start Grape Varitry ============ -->
+          <div class="filter__grape filter-div flex-jsbetween">
+            <span>Grape varitry</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div grape-list hide" id="grapeList"></ul>
+          <!-- =========== end Grape Varitry ============ -->
+
+          <!-- =========== start Vintage Year ============ -->
+          <div class="filter__vintage-year filter-div flex-jsbetween">
+            <span>Vintage year</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul
+            class="filter-div vintage-year-list hide"
+            id="vintage-yearList"
+          ></ul>
+          <!-- =========== end Vintage Year ============ -->
+
+          <!-- =========== start Size ============ -->
+          <div class="filter__size filter-div flex-jsbetween">
+            <span>Size</span>
+            <i class="uil uil-plus"></i>
+          </div>
+          <ul class="filter-div size-list hide" id="sizeList"></ul>
+          <!-- =========== end Size ============ -->
+        </div>
+        <!-- ==================== EDN OF FILTER =================== -->
+
+        <!-- ==================== START OF PRODUCT =================== -->
+
+        <div class="product__container">
+          <!-- =============== First Section ==============  -->
+          <div class="fist__container">
+            <p class="total__product">25 results</p>
+            <span class="sort__featured"
+              >Sort by:
+
+              <select class="sort__featured-select">
+                <option value="">FEATURED</option>
+                <option value="popular">Popular</option>
+                <option value="low-to-high">Low To High</option>
+                <option value="high-to-low">High To Low</option>
+                <option value="rating-average">Average Rating</option>
+              </select>
+            </span>
+          </div>
+          <!-- =============== Second Section ==============  -->
+          <div class="second__container">
+            <button>
+              Red Wine
+              <i class="uil uil-multiply"></i>
+            </button>
+            <button>
+              White Wine
+              <i class="uil uil-multiply"></i>
+            </button>
+            <button>
+              View All
+              <i class="uil uil-multiply"></i>
+            </button>
+            <a href="#">Clear filters</a>
+            <i class=""></i>
+          </div>
+
+          <div class="products__container">
+            <div class="products">
+
+
+
+              <div class="product">
+
+                <div class="first-section">
+                  <div>
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.7</span>
+                    <p>Product Code: 62354</p>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-scale-unbalanced"></i>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                 
+                </div>
+
+
+
+                <!-- =============== Image ============== -->
+                <div class="second-section">
+                  <div class="product-image">
+                    <img src="/images/chenin_blanc.jpeg" alt="">
+                  </div>
+                
+                </div>
+
+                <div class="third-section">
+                  <h4>Lorem ipsum dolor sit amet consectetur adipisicing </h4>
+                </div>
+
+                <div class="four-section flex-jsbetween">
+                  <div class="flex-jsbetween">
+                    <img src="/images/flag-Images/argentina.png">
+                    <span>Argentina</span>
+                  </div>
+                  <span>Dry</span>
+                  <span>Rose</span>
+                </div>
+
+                <div class="five-section flex-jsbetween">
+                  <h2>$710</h2>
+                  <div class="plus-btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="product">
+                <div class="first-section">
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+
+              <div class="product">
+                <div class="first-section">
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 20%"></div>
+        <!-- ==================== END OF PRODUCT =================== -->
+      </div>
+      <!-- ==================== END OF CONTENT CONTAINER =================== -->
+    </div>
+    <!-- ================== END OF PRODUCTS ====================== -->
+  </body>
 </html>
+<script type="module" src="/script/utils.js"></script>
+<script type="module" src="/script/product.js"></script>
+<script type="module" src="/script/filters.js"></script>

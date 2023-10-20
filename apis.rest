@@ -1,14 +1,1 @@
-GET http://localhost:3000/posts
-
-###
-POST http://localhost:3000/posts
-Content-Type: application/json
-
-{
-     "id":786,
-     "title":"own server",
-     "author":"salman"
-}
-
-###
-GET  http://localhost:3000/albums
+GET http://localhost:3000/products?body=Light

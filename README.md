@@ -89,3 +89,11 @@ this thing you need to keep in mind
 you have array you need to give me json data with the given keys. you need to fill data in the correct place 
 json data length should be wineName.length;
 
+ body = [Full, Light, Medium]
+ countryOfOrign = take from locations and add only country like: California, USA to be USA 
+ FoodPairing = Add Randomly 5 FoodPairing and repeat in all data
+ Brand: add Randomly 5 Brand and repeat in all data
+ Region: add Randomly 5 Region and repeat in all data
+ GrapeVariety: add Randomly 5 Grape Variety and repeat in all data
+ Vintage Year: add Randomly 5 Vintage Year and repeat in all data
+ Size: add Randomly 5 Size Year and repeat in all data
