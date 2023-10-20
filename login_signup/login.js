@@ -64,3 +64,17 @@ loginForm.addEventListener("submit", (event) => {
     });
   //---SignIn with firebase ends here--->>
 });
+
+let signUpShow = document.querySelector(".createAccount");
+
+signUpShow.addEventListener("click", () => {
+  document.querySelector(".loginMainDiv").style.display = "none";
+  document.querySelector(".signUpMainDiv").style.display = "block";
+});
+
+let goToLogin = document.querySelector(".goToLogin");
+
+goToLogin.addEventListener("click", () => {
+  document.querySelector(".loginMainDiv").style.display = "flex";
+  document.querySelector(".signUpMainDiv").style.display = "none";
+});
