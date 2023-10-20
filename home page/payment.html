@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <script src="https://kit.fontawesome.com/b7836bba55.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/header.css">
+    
+    <style>
+        body{
+            background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+        }
+        #info{
+            padding: 30px 80px;
+            display: flex;
+        }
+        #left{
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+            width: 57%;
+            padding: 5px;
+        }
+        #right{
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+            width: 30%;
+            margin-left: 8%;
+            padding: 5px;
+        }
+        #topLeft{
+            display: flex;
+            justify-content: space-between;
+        }
+        #fullName{
+            display: flex;
+            justify-content: space-between;
+        }
+        #right{
+
+            padding: 0px 20px;
+        }
+        #topRight{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 90px;
+        }
+        #topRight p{
+            color: cadetblue;
+            margin-top: 25px;
+        }
+        #freeShopping{
+            text-align: center;
+            border: 2px solid rgb(154, 241, 198);
+            padding: 5px;
+            border-radius: 3px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        label{
+            font-size: 17px;
+        }
+       
+        #details{
+            margin-top: 30px;
+        }
+
+        button{
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #bf0d12;
+            color: #fff8e9;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            scale: 1.1;
+            transition: 0.5s;
+            color: #fff8e9;
+        }
+        .fa-solid{
+            margin-top: 20px;
+        }
+        
+        #image img{
+            width: 60%;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #discountPrice{
+            text-decoration: line-through;
+        }
+        #prices{
+            display: flex;
+            justify-content: space-between;
+        }
+        #total{
+            display: flex;
+            justify-content: space-between;
+        }
+        #promobtn{
+            width: 102%;
+            margin-top: -25px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #bf0d12;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #promobtn:hover{
+            scale: 1.1;
+            transition: 0.5s;
+            color: #fff8e9;
+        }
+        #promocode,#actualPromoAmt{
+            display: flex;
+            justify-content: space-between;
+        }
+        #promo{
+            padding: 10px;
+            margin-top: 15px;
+            width: 95.5%;
+            background-color: #fff8e9;
+            border: 1px solid grey;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<header id="header"></header>
+<body>
+    <div id="info">
+        <div id="left">
+            <div>
+                <h1>Checkout</h1>
+            </div>
+        <div id="topLeft">
+            <h3>1.Information</h3>
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <h3>2.Delivery</h3>
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <h3 >3.Payment method</h3>
+        </div>
+        <div id="details">
+            <form action="">
+               <br><hr><br>
+               <input type="checkbox" id="online" onclick="check1()">
+               <label for="" >Online Payment Upon Delivery</label><br><br><hr><br>
+               <input type="checkbox" id="cod" onclick="check2()">
+               <label for="" >Cash On Delivery</label><br><br><br>
+                <button id="submit">Continue</button>
+            </form>
+        </div>
+        </div>
+        <div id="right">
+            <div id="topRight">
+                <h2>Your Order</h2>
+                <p>Edit</p>
+            </div>
+            <p id="freeShopping">You're getting free shipping!</p>
+            <p>You earn 320 points on this purchase!</p>
+            <hr>
+            <div id="productDetails">
+            </div>
+            <label for="">Apply Promocode</label><br>
+            <input type="text" id="promo" placeholder="Apply Promocode">
+            <h4 id="promoAmount"></h4>
+            <button id="promobtn">Apply</button>
+            <div id="promocode">
+                <h4 id="LP"></h4>
+                <h4 id="promoAmt"><span></span></h4>
+            </div>
+            <hr>
+            <div id="actualPromoAmt">
+                <h4 id="FA"></h4>
+                <h4 id="promoAmtFinal"></h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let online = document.getElementById("online");
+        online.checked = true;
+        let cod = document.getElementById("cod");
+
+        const check1 = () =>{
+            cod.checked = false;
+        }
+
+        const check2 = () => {
+            online.checked = false;
+        }
+
+        let btn = document.getElementById("submit");
+        btn.addEventListener("click",()=>{
+            event.preventDefault()
+            if(online.checked){
+                location.href = "payment2.html";
+            }
+            else{
+                location.href = "thankyou.html"
+            }
+        })
+
+        let data = JSON.parse(localStorage.getItem("cart")) || [];
+        let container = document.getElementById("productDetails");
+        let sum = 0;
+        let displayData = ()=>{
+            sum = 0;
+            container.textContent = "";
+            data.forEach(elm=>{
+                let image = document.createElement("div");
+                image.setAttribute("id","image")
+                let img = document.createElement("img");
+                img.src = elm.image_url;
+                image.appendChild(img);
+                let div = document.createElement("div");
+                let name = document.createElement("h5");
+                name.textContent = elm.name;
+                let price = document.createElement("div");
+                price.setAttribute("id","prices");
+                let h5 = document.createElement("h5");
+                let discountPrice = document.createElement("span");
+                discountPrice.setAttribute("id","quantity");
+                discountPrice.textContent = "Qty ";
+                let acctualPrice = document.createElement("span");
+                acctualPrice.setAttribute("class","qty");
+                acctualPrice.textContent = `(${elm.qty} * ${elm.price})`
+                h5.append(discountPrice,acctualPrice);
+                let mainAcctualPrice = document.createElement("h5");
+                mainAcctualPrice.setAttribute("class","acctualPrice");
+                mainAcctualPrice.textContent = "$ "+(elm.price*elm.qty)
+                sum = sum+(elm.price*elm.qty);
+                price.append(h5,mainAcctualPrice);
+                let hr = document.createElement("hr");
+                div.append(name,price,hr);
+                container.append(image,div)
+
+            });
+                let total = document.createElement("div");
+                total.setAttribute("id","total")
+                let totalH3 = document.createElement("h3");
+                totalH3.textContent = "Total";
+                let totalAmount = document.createElement("h3");
+                totalAmount.textContent = sum;
+                total.append(totalH3,totalAmount);
+                container.append(total);
+        }
+        displayData()
+        let promobtn = document.getElementById("promobtn");
+        promobtn.addEventListener("click",()=>{
+            promofun()
+        })
+
+        let promofun = ()=>{
+            let promo = document.getElementById("promo").value;
+            if(promo == "wine10"){
+                document.getElementById("LP").textContent = "Less Promo"
+                document.getElementById("promoAmt").textContent ="-"+ (sum*10/100)
+                document.getElementById("FA").textContent = "Final Amount"
+                let val = document.getElementById("promoAmtFinal").textContent = sum - (sum*10/100)
+                console.log(val)
+            }
+        }
+    </script>
+
+
+</body>
+<footer id="footer"></footer>
+<script src="./JS/importedHeader.js" type="module"></script>
+</html>

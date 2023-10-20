@@ -1,0 +1,93 @@
+*{
+    background-color: #fff8e9;
+    box-sizing: border-box;
+    font-family: 'PT Mono';
+}
+
+body{
+    font-family: 'PT Mono';
+}
+
+.container h3,
+h4,
+p {
+    text-align: left;
+    padding-left: 15px;
+    color: #1e1e1e;
+}
+
+.container {
+    width: 30%;
+    margin: auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    padding-right: 15px;
+}
+
+.cardImg>img {
+    width: 50px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+}
+
+.container input {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #1e1e1e;
+}
+
+.container input:focus {
+    border: 1.2px solid #1e1e1e;
+}
+
+#payment {
+    cursor: pointer;
+    background-color: #bf0d12;
+    color: #fff8e9;
+}
+
+#payment:hover{
+    color: #fff8e9;
+    background-color: #86070b;
+    transition: 0.5s;
+}
+
+#payment:active{
+    font-size: large;
+    padding: 13.4px;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width:1024px) {
+
+    .container {
+        width: 75%;
+        margin-top: 30px;
+    }
+
+}
+@media only screen and (max-width:768px) {
+
+    .container {
+
+        width: auto;
+        margin: 15px;
+    }
+
+}
+ 

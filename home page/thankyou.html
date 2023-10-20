@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/b7836bba55.js" crossorigin="anonymous"></script>
+    <title>Thankyou Page</title>
+    <link rel="stylesheet" href="./CSS/header.css">
+    <style>
+        body{
+            background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+        }
+        #container{
+            display: flex;
+            padding: 120px 240px;
+            
+        }
+        img{
+            width: 400px;
+        }
+        #wish{
+            margin-left: 50px;
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+        button{
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+    </style>
+</head>
+<header id="header"></header>
+<body>
+    <div id="container">
+        <div id="image">
+            <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg" alt="">
+        </div>
+        <div id="wish">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your order number is <span id="order-no">3558</span></p>
+            <p>You can find details in a confirmation mail or your account</p>
+            <button id="btn">Continue shopping</button>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            let cartItems = JSON.parse(localStorage.getItem("cart"));
+            cartItems = [];
+            localStorage.setItem("cart",JSON.stringify(cartItems));
+            location.href = "index.html" 
+        })
+
+        let orderNo = Math.floor(Math.random() * (4000 - 1000 + 1)) + 1000;
+        console.log(orderNo);
+        let random = document.getElementById("order-no");
+        random.textContent = orderNo;
+    </script>
+</body>
+<footer id="footer"></footer>
+<script src="./JS/importedHeader.js" type="module"></script>
+</html>
