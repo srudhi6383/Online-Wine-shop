@@ -1,0 +1,134 @@
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+    /* background-image: url(""); */
+}
+#cart-div{
+    border: 1px solid grey;
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    padding: 40px;
+    /* padding-right: 20px;
+    padding-left: 20px; */
+}
+#cart-div> h1{
+    text-align: center;
+}
+
+
+#display-div img{
+    width: 120px;
+    height: 120px;
+}
+#display-div > div{
+    border-top: 1px solid grey;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    font-size: large;
+    
+    
+}
+#display-div > div:nth-last-child(n){
+    text-align: end;
+    
+}
+
+#quantityDiv button{
+    width: 20px;
+    background-color: #fff8e9;
+    border: none;
+}
+#input-area{
+    width: 20px;
+    background-color: #fff8e9;
+    border: none;
+}
+
+button{
+    background-color: #fff8e9;
+    border: none;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+#checkout-div{
+    border-top: 1px solid grey;
+
+}
+
+#checkout-div p{
+    font-size: small;
+    color: grey;
+    letter-spacing: -0.75px;
+    word-spacing: -1px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+#checkout-div i{
+    margin-right: 5px;
+}
+
+#total-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sub-items{
+    display: flex;
+    align-items: center;
+}
+
+#checkoutBtn{
+    width: 100%;
+    border: 1px solid beige;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #bf0d12;
+    color: white;
+    font-size: medium;
+    font-weight: lighter;
+}
+button:hover{
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:1000px) {
+    #cart-div {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+      }
+
+}
+@media only screen and (max-width:700px) {
+  
+    #cart-div {
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+        margin-top: 5%;
+      }
+      #display-div img{
+        width: 80px;
+        height: 80px;
+    }
+    #display-div > div{
+        font-size: medium;
+        
+        
+    }
+    #quantityDiv button{
+        width: 8px;
+        background-color: #fff8e9;
+    }
+    #input-area{
+        width: 8px;
+        background-color: #fff8e9;
+    }
+}

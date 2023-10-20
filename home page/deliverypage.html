@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: rgb(253, 251, 240);
+        }
+        #info{
+            padding: 30px 80px;
+            display: flex;
+        }
+        #left{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            width: 57%;
+            padding: 5px;
+        }
+        #right{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            width: 30%;
+            margin-left: 8%;
+            padding: 5px;
+        }
+        #topLeft{
+            display: flex;
+            justify-content: space-between;
+        }
+        #fullName{
+            display: flex;
+            justify-content: space-between;
+        }
+        #right{
+
+            padding: 0px 20px;
+        }
+        #topRight{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 90px;
+        }
+        #topRight p{
+            color: cadetblue;
+            margin-top: 25px;
+        }
+        #freeShopping{
+            text-align: center;
+            border: 2px solid rgb(154, 241, 198);
+            padding: 5px;
+            border-radius: 3px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            padding: 12px 8px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            width: 97%;
+            border-radius: 3px;
+            border: 1px solid teal;
+            font-size: 16px;
+        }
+        #details{
+            margin-top: 30px;
+        }
+        #fullName input{
+            width: 300px;
+        }
+        button{
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+        .fa-solid{
+            margin-top: 20px;
+        }
+        
+        #image img{
+            width: 60%;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #discountPrice{
+            text-decoration: line-through;
+        }
+        #prices{
+            display: flex;
+            justify-content: space-between;
+        }
+        #total{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <div id="left">
+            <div>
+                <h1>Checkout</h1>
+            </div>
+        <div id="topLeft">
+            <h3>1.Information</h3>
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <h3>2.Delivery</h3>
+            <i class="fa-solid fa-arrow-right-long" style="color: cadetblue;"></i>
+            <h3 style="color: cadetblue;">3.Payment method</h3>
+        </div>
+        <div id="details">
+            <form action="">
+                <label for="">Shipping Method</label><br>
+                <input type="text" id="sm"><br>
+                <label for="">City</label><br>
+                <input type="text" id="city"><br>
+                <label for="">Post Office</label><br>
+                <input type="text" name="" id="po"><br><br>
+                <label for="">Mon-Fri 09:00-18:00</label><br>
+                <label for="">Sat-Sun 09:00-15:00</label>
+                <button id="submit">Continue</button>
+            </form>
+        </div>
+        </div>
+        <div id="right">
+            <div id="topRight">
+                <h2>Your Order</h2>
+                <p>Edit</p>
+            </div>
+            <p id="freeShopping">You're getting free shopping!</p>
+            <p>You earn 320 points on this purchase!</p>
+            <hr>
+            <div id="productDetails">
+                <div id="image">
+                    <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg" alt="">
+                </div>
+                <div id="">
+                    <h5>Château Margaux</h5>
+                    <p>year <span id="year">2019</span></p>
+                    <div id="prices">
+                        <h5><span id="discountPrice">2000  </span><span class="acctualPrice">1800</span></h5>
+                        <h5 class="acctualPrice">1800</h5>
+                    </div>
+                    <hr>
+                </div>
+                <div id="total">
+                    <h3>Total</h3>
+                    <h3>1800</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+let btn = document.getElementById("submit");
+        btn.addEventListener("click",()=>{
+            event.preventDefault()
+            let shippingMethod = document.getElementById("sm").value;
+            let cityName = document.getElementById("city").value;
+            let PostOffice = document.getElementById("po").value;
+
+            if(shippingMethod == "" || cityName == "" || PostOffice == ""){
+                alert("Please Fill All Details")
+            }else{
+                location.href = "payment.html"
+            }
+        })
+
+
+        let data = JSON.parse(localStorage.getItem("card")) || [];
+
+        // let totalPrice = (arr)=>{
+        //     let price;
+        //     arr.forEach(elm=>{
+        //         price = price + elm.price
+        //         console.log(price)
+        //     })
+        //     return price
+        // }
+        let container = document.getElementById("productDetails");
+        let displayData = ()=>{
+            container.textContent = "";
+            let sum = 0;
+            data.forEach(elm=>{
+                let image = document.createElement("div");
+                image.setAttribute("id","image")
+                let img = document.createElement("img");
+                img.src = elm.url
+                image.appendChild(img);
+                let div = document.createElement("div");
+                let name = document.createElement("h5");
+                name.textContent = elm.name;
+                let paraYear = document.createElement("p");
+                paraYear.textContent = "Year "
+                let year = document.createElement("span");
+                year.setAttribute("id","year");
+                year.textContent=elm.year;
+                paraYear.appendChild(year);
+                let price = document.createElement("div");
+                price.setAttribute("id","prices");
+                let h5 = document.createElement("h5");
+                let discountPrice = document.createElement("span");
+                discountPrice.setAttribute("id","discountPrice");
+                discountPrice.textContent = "₹ "+(elm.price+180);
+                let acctualPrice = document.createElement("span");
+                acctualPrice.setAttribute("class","acctualPrice");
+                acctualPrice.textContent = " "+" "+"₹ "+elm.price;
+                h5.append(discountPrice,acctualPrice);
+                let mainAcctualPrice = document.createElement("h5");
+                mainAcctualPrice.setAttribute("class","acctualPrice");
+                mainAcctualPrice.textContent = "₹ "+elm.price
+                sum = sum+elm.price;
+                price.append(h5,mainAcctualPrice);
+                let hr = document.createElement("hr");
+                div.append(name,paraYear,price,hr);
+                container.append(image,div)
+
+            });
+
+                // let totalPri = totalPrice(data);
+                let total = document.createElement("div");
+                total.setAttribute("id","total")
+                let totalH3 = document.createElement("h3");
+                totalH3.textContent = "Total";
+                let totalAmount = document.createElement("h3");
+                totalAmount.textContent = sum;
+                total.append(totalH3,totalAmount);
+                container.append(total);
+                // console.log(totalPri)
+        }
+        displayData()
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For Title image -->
+    <!-- <link rel="icon" type="image/svg+xml" href="./Assets/2.jpg" /> -->
+    <title>Wine Shop | HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/header.css"/>
+    <script src="https://kit.fontawesome.com/b7836bba55.js" crossorigin="anonymous"></script>
+  </head>
+  <header id="header">
+
+  </header>
+  <body id="body" onload="appendGreatDeals()">
+    <h1 class="text" id="head-title">Wines from the best vineyards</h1>
+    <!-- Product Sliding Start -->
+    <div class="slider">
+      <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1"/>
+          <input type="radio" name="radio-btn" id="radio2"/>
+          <input type="radio" name="radio-btn" id="radio3"/>
+          
+          <div class="slide" id="MakeItSlide">
+              <img src="./Assets/try 3.jpg" 
+              alt="Wine">
+          </div>
+          
+          <div class="slide">
+              <img src="./Assets/try 4.jpg" 
+              alt="Wine">
+          </div>
+
+          <div class="slide">
+              <img src="./Assets/try 5.jpg" 
+              alt="Wine">
+          </div>
+
+      </div>
+  </div>
+    <!-- Product Sliding End -->
+    
+    <!-- Different Wines Start -->
+    <div id="items">
+      <h1 class="text">What would you like?</h1>
+      <div id="wine-category">
+        <div class="wine">
+          <img src="./Assets/white_wine_updated-removebg.png" alt="white wine" />
+          <h3 class="text">White</h3>
+        </div>
+        <div class="wine">
+          <img src="./Assets/red_wine_updated-removebg.png" alt="red wine" />
+          <h3 class="text">Red</h3>
+        </div>
+        <div class="wine">
+          <img src="./Assets/rose_wine_updated-removebg.png" alt="rose wine" />
+          <h3 class="text">Rose</h3>
+        </div>
+        <div class="wine">
+          <img
+            src="./Assets/sparkling_wine-removebg.png"
+            alt="sparkling wine" />
+          <h3 class="text">Sparkling</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Different Wines End -->
+
+    <!-- Sets and Gifts Start -->
+    <div id="sets-gifts">
+      <h1 class="text">Sets and Gifts</h1>
+
+      <div id="gifts">
+        <div class="gifts-category">
+          <img src="./Assets/gift wine glasses.jpg" alt="wine glasses">
+          <h3 class="text">Wine glasses</h3>
+        </div>
+  
+        <div class="gifts-category">
+          <img src="./Assets/wine sets.jpg" alt="wine sets">
+          <h3 class="text">Wine sets</h3>
+        </div>
+  
+        <div class="gifts-category">
+          <img src="./Assets/wine decanter.jpg" alt="Decanter">
+          <h3 class="text">Decanters</h3>
+        </div>
+      </div>
+      
+      <div id="sets-gifts-btn">
+        <button class="text" >View all <span class="right-arrow">&#10230;</span></button>
+      </div>
+    </div>
+    <!-- Sets and Gifts End -->
+
+
+    <!-- Options Start -->
+    <div id="options-container">
+      <div id="options">
+        <div>
+          <h3 id="option1" class="text" onclick="appendGreatDeals()">Great deals</h3>
+        </div>
+        
+        <div >
+          <h3 id="option2" class="text" onclick="append()">Bestsellers</h3>
+        </div>
+  
+        <div>
+          <h3 id="option3" class="text" onclick="appendHighlyRated()">Highly rated</h3>
+        </div>
+  
+        <div>
+          <h3 id="option4" class="text" onclick="appendNewArrival()">New arrivals</h3>
+        </div>
+  
+      </div>
+      
+      <div id="options-append">
+        <!-- Items will be appended here -->
+      </div>
+      
+      <div id="sets-gifts-btn" class="sets-gifts-btn">
+        <button class="text" >View all <span class="right-arrow">&#10230;</span></button>
+      </div>
+    </div>
+    <!-- Options End-->
+
+
+    <!-- Wine Subscription Start -->
+    <div class="main-wine-subscription">
+      <div id="wine-subscription-text-content">
+        <h1 class="text">Wine subscription</h1>
+        <p class="text-nunito">Subscription is a journey through the world of wine, four bottles at a time. 
+          Each month, we select wines based on a chosen theme and explain how each bottle 
+          fits that theme - it's wine education and enjoyment in equal measure!
+        </p>
+        <div >
+          <button class="text" id="wine-subscription-btn"  >More about subscription</button>
+        </div>
+      </div>
+      <div id="image-and-content">
+        <div id="subscription-img">
+          <img src="./Assets/wine subscription image.jpg" alt="4 wine bottles">
+        </div>
+
+        <div id="first-vertical-div">
+          <div class="text"><h3>Wine subscription</h3></div>
+          <div>&#x27F5;</div>
+        </div>
+        
+        <div id="second-vertical-div">
+          <div class="text"><h3>Need a help?</h3></div>
+          <div>&#x27F5;</div>
+        </div>
+        
+        <div id="third-vertical-div">
+          <div class="text"><h3>Looking for a gift?</h3></div>
+          <div>&#x27F5;</div>
+        </div>
+      </div>
+    </div>
+    <!-- Wine Subscription End -->
+
+    <!-- Blog and News Start -->
+    <div id="blog-and-news">
+      <h1 class="text">Blog and News</h1>
+      <div id="blogs">
+        <div class="blog-and-news-div">
+          <img src="./Assets/blog and news one(3).jpg" alt="">
+          <p class="text-nunito">29/01/2023</p>
+          <h3 class="text">Enjoy a fun new way to get to know wine</h3>
+        </div>
+
+        <div class="blog-and-news-div">
+          <img src="./Assets/blog and news 2.jpg" alt="">
+          <p class="text-nunito">10/02/2023</p>
+          <h3 class="text">Wine and oysters. A rule just waiting to be broken</h3>
+        </div>
+
+        <div class="blog-and-news-div">
+          <img src="./Assets/blog and news 3.jpg" alt="">
+          <p class="text-nunito">17/02/2023</p>
+          <h3 class="text">A brief (troubled) history of Champagne</h3>
+        </div>
+
+        <div class="blog-and-news-div">
+          <img src="./Assets/blog and news four.jpg" alt="">
+          <p class="text-nunito">26/02/2023</p>
+          <h3 class="text">The wines we have on our own table right now</h3>
+        </div>
+      </div>
+
+      <div id="blogs2">
+        <div class="blog-and-news-div">
+          <img src="./Assets/black grapes.jpg" alt="">
+          <p class="text-nunito">01/03/2023</p>
+          <h3 class="text">To drink better, wine lovers need to look
+            beyond the bottle
+          </h3>
+        </div>
+
+        <div id="final-two">
+          <div class="blog-and-news-div" id="see-all-articles">
+            <h1 class="text" id="see-all">See all <br> articles</h1>
+            <button id="continue">Continue</button>
+          </div>
+
+          <div class="blog-and-news-div">
+            <img src="./Assets/bolg and news 6.jpg" alt="wineeee">
+            <p class="text-nunito">12/03/2023</p>
+            <h3 class="text">The many scents found in wine</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blog and News End -->
+
+    <!-- Instagram Start -->
+    <div id="insta-header">
+      <h2 class="text">We are on Instagram</h2>
+      <p class="text" id="mine-wine">@minewine</p>
+    </div>
+    <div id="instagram">
+      <div class="insta-image">
+        <img src="./Assets/insta 1.jpg" alt="Instagram Photo 1">
+      </div>
+
+      <div class="insta-image">
+        <img src="./Assets/insta 2.jpg" alt="Instagram Photo 2">
+      </div>
+
+      <div class="insta-image">
+        <img src="./Assets/insta three.jpg" alt="Instagram Photo 3">
+      </div>
+
+      <div class="insta-image">
+        <img src="./Assets/insta four.jpg" alt="Instagram Photo 4">
+      </div>
+    </div>
+    <!-- Instagram End -->
+
+    <script src="./JS/index.js"></script>
+  </body>
+  <footer id="footer">
+
+  </footer>
+  <script type="module" src="./JS/importedHeader.js"></script>
+</html>
