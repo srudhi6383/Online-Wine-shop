@@ -4,9 +4,12 @@ body {
 }
 #login_container {
   /* border: 1px solid red; */
+  max-width: 1280px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
+  padding-bottom: 70px;
   /* background-color: rgb(255, 248, 233); */
 }
 #left_img {
@@ -118,10 +121,9 @@ body > div > h1 {
 } */
 .goToLogin {
   cursor: pointer;
-
 }
 
-.account_create{
+.account_create {
   text-align: center;
 }
 

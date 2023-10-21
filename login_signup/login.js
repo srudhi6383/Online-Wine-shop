@@ -1,9 +1,12 @@
+import footerAdd from "../../footer.js";
 //------------------------FireBase (Don not touch)------------------------>>
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,30 +19,74 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const provider = new GoogleAuthProvider();
 //------------------------FireBase (Don not touch)------------------------>>
+const isAuth = JSON.parse(localStorage.getItem("isAuth")) || {};
 
+//===================Google Authentication=============================>
+document.getElementById("googleAuth").addEventListener("click", () => {
+  console.log("Arti");
+  const auth = getAuth();
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      console.log(user);
+      let obj = {
+        name: user.displayName,
+        loginStatus: true,
+      };
+      localStorage.setItem("isAuth", JSON.stringify(obj));
+
+      window.location = "./index.html";
+      // IdP data available using getAdditionalUserInfo(result)
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+});
 //--------------------SignUp form starts here ------------------>>
-// let signForm = document.querySelector("#loginForm");
-// signForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const email = event.target.email.value;
-//   const password = event.target.password.value;
+let Signform = document.querySelector("#form2");
+Signform.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const fullName = event.target.username.value;
+  const email = event.target.email2.value;
+  const password = event.target.password2.value;
+  const confirmPass = event.target.confirmpassword2.value;
+  const phone = event.target.number.value;
 
-//   //---SignUp with firebase starts here--->>
-//   const auth = getAuth();
-//   createUserWithEmailAndPassword(auth, email, password)
-//     .then((userCredential) => {
-//       const user = userCredential.user;
-//       // console.log(user);
-//       alert("user had signedup successfully");
-//     })
-//     .catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       alert("user credentials are wrong");
-//     });
-//   //---SignUp with firebase ends here--->>
-// });
+  console.log(fullName, email, password, confirmPass, phone);
+  const auth = getAuth();
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      // console.log(user);
+      let obj = {
+        name: fullName,
+        loginStatus: true,
+      };
+      localStorage.setItem("isAuth", JSON.stringify(obj));
+      alert("user had signedup successfully");
+      window.location = "./index.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert("user credentials are wrong");
+    });
+});
+
 //--------------------SignUp form Ends here ------------------>>
 
 //-------------------Sign in with email and password-------->>
@@ -55,6 +102,11 @@ loginForm.addEventListener("submit", (event) => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("user had Loggged in successfully");
+      let obj = {
+        name: email,
+        loginStatus: true,
+      };
+      localStorage.setItem("isAuth", JSON.stringify(obj));
       window.location = "./index.html";
     })
     .catch((error) => {
