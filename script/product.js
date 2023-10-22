@@ -4,16 +4,19 @@ import { createFilterFunction } from "./utils.js";
 let baseServerUrl = `http://localhost:3000`;
 let productUrl = `${baseServerUrl}/products`;
 
-fetchData(productUrl);
+fetchData(productUrl,``);
+const totalProduct = document.querySelector('.total__product span')
 
-export async function fetchData(apiUrl,quaryString) {
+
+export async function fetchData(apiUrl, quaryString) {
   try {
     let response = await fetch(`${apiUrl}?${quaryString}`);
     let data = await response.json();
 
     getFilterData(data);
-    console.log(data)
     createCards(data);
+    totalProduct.innerHTML = data.length
+
   } catch (error) {
     console.log(error);
   }
@@ -105,14 +108,14 @@ function createFilterItems(data, filterItemsContainer, filterElement) {
     const checked = document.createElement('i');
 
     squareIcon.classList.add('uil', 'uil-glass-martini-alt');
-    checked.classList.add('uil', 'uil-check','hide');
+    checked.classList.add('uil', 'uil-check', 'hide');
 
     itemText.appendChild(squareIcon);
     itemText.innerHTML += ` ${item}`;
     list.append(itemText, checked);
 
     filterItemsContainer.appendChild(list);
-    
+
 
     list.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -124,7 +127,7 @@ function createFilterItems(data, filterItemsContainer, filterElement) {
       filterFunctionlity(item, 'Region', elementText)
       filterFunctionlity(item, 'Size', elementText)
 
-      filterSeperate(item,elementText)
+      filterSeperate(item, elementText)
 
       // filterFunctionlity(item, 'Country of origin', elementText)
       // filterFunctionlity(item, 'Grape varitry', elementText)
@@ -141,22 +144,21 @@ function createFilterItems(data, filterItemsContainer, filterElement) {
 }
 function filterFunctionlity(item, filter, element) {
   if (element === filter) {
-    fetchData(productUrl,`${filter.toLowerCase()}=${item}`)
-    alert("working")
+    fetchData(productUrl, `${filter.toLowerCase()}=${item}`)
+
   }
 }
 
-function filterSeperate(item,  element){
-  if(element === 'Country of origin'){
-    fetchData(productUrl,`countryOfOrigin=${item}`)
-    alert("Country of origin working")
-  }else if(element === 'Grape varitry'){
-    fetchData(productUrl,`grapeVariety=${item}`)
-    alert("Grape varitry working")
-  }else if(element === 'Vintage year'){
-    fetchData(productUrl,`vintageYear=${item}`)
-    alert("Grape varitry working")
-  }else{
+function filterSeperate(item, element) {
+  if (element === 'Country of origin') {
+    fetchData(productUrl, `countryOfOrigin=${item}`)
+
+  } else if (element === 'Grape varitry') {
+    fetchData(productUrl, `grapeVariety=${item}`)
+
+  } else if (element === 'Vintage year') {
+    fetchData(productUrl, `vintageYear=${item}`)
+  } else {
     if (item === 'Under - $10') {
       fetchData(productUrl, `price_lte=9`);
     } else if (item === '$11 - $15') {
@@ -176,75 +178,128 @@ function filterSeperate(item,  element){
 const mainContainer = document.querySelector('.products__container');
 
 
-function createCards(data){
-    mainContainer.innerHTML = '';
+function createCards(data) {
+  mainContainer.innerHTML = '';
 
-    const productCard = document.createElement('div');
-    productCard.classList.add('products')
-    data.forEach(item=>{
-      const card = document.createElement('div');
-      card.classList.add('product')
+  const productCard = document.createElement('div');
+  productCard.classList.add('products')
+  data.forEach(item => {
+    const card = document.createElement('div');
+    card.classList.add('product')
 
-      const firstSection = document.createElement('div');
-      firstSection.classList.add('first-section');
+    const firstSection = document.createElement('div');
+    firstSection.classList.add('first-section');
 
-      const firstDiv = document.createElement('div')
+    const firstDiv = document.createElement('div')
 
-      const starIcon = document.createElement('i');
-      starIcon.classList.add('uis','uis-favorite')
-
-
-      const rating = document.createElement('span');
-      rating.innerHTML = item.rating;
-
-      const productCode = document.createElement('p');
-      productCode.innerHTML = `Product Code: ${item.productCode}`
-
-      const secondDiv = document.createElement('div')
-
-      const balancedIcons = document.createElement('i');
-      balancedIcons.classList.add('uil',item.compare)
-
-      const likeIcon = document.createElement('i');
-      likeIcon.classList.add('uil',item.favorites)
+    const starIcon = document.createElement('i');
+    starIcon.classList.add('uis', 'uis-star')
 
 
-      firstDiv.append(starIcon,rating,productCode)
-      secondDiv.append(balancedIcons,likeIcon)
+    const rating = document.createElement('span');
+    rating.innerHTML = item.rating;
 
-      firstSection.append(firstDiv,secondDiv);
+    const productCode = document.createElement('p');
+    productCode.innerHTML = `Product Code: ${item.productCode}`
 
-      const secondSection = document.createElement('div');
-      secondSection.classList.add('second-section');
+    const secondDiv = document.createElement('div')
 
-      const productImage = document.createElement('div');
-      productImage.classList.add('product-image');
+    const balancedIcons = document.createElement('i');
+    balancedIcons.classList.add('uil', item.compare)
 
-      const photo = document.createElement('img');
-      photo.src = baseServerUrl + item.image
-
-      productImage.append(photo)
-      secondSection.append(productImage);
-
-      const thirdSection = document.createElement('div');
-      thirdSection.classList.add('third-section')
-
-      const title = document.createElement('h4');
-      title.innerHTML = `${item.name}, ${item.location}`
-
-      thirdSection.append(title)
-
-      const fourSection = document.createElement('div');
-      fourSection.classList.add('four-section','flex-jsbetween')
-
-      
+    const likeIcon = document.createElement('i');
+    likeIcon.classList.add('uil', item.favorites)
 
 
+    firstDiv.append(starIcon, rating, productCode)
+    secondDiv.append(balancedIcons, likeIcon)
 
-      card.append(firstSection,secondSection,thirdSection);
+    firstSection.append(firstDiv, secondDiv);
 
-      productCard.append(card);
-    })
-    mainContainer.append(productCard)
+    const secondSection = document.createElement('div');
+    secondSection.classList.add('second-section');
+
+    const productImage = document.createElement('div');
+    productImage.classList.add('product-image');
+
+    const photo = document.createElement('img');
+    photo.src = item.image
+
+    productImage.append(photo)
+    secondSection.append(productImage);
+
+    const thirdSection = document.createElement('div');
+    thirdSection.classList.add('third-section')
+
+    const title = document.createElement('h4');
+    title.innerHTML = `${item.name}, ${item.vintageYear}`
+
+    thirdSection.append(title)
+
+    const fourSection = document.createElement('div');
+    fourSection.classList.add('four-section', 'flex-jsbetween')
+
+    const fourChildDiv = document.createElement('div');
+    fourChildDiv.classList.add('flex-jsbetween');
+
+    const countryFlag = document.createElement('img');
+    const countryName = document.createElement('span');
+    const category1 = document.createElement('span');
+    const category2 = document.createElement('span');
+    countryFlag.src = item.placeIcon;
+    countryName.innerHTML = item.countryOfOrigin
+    category1.innerHTML = item.type;
+    category2.innerHTML = "Dry";
+
+    fourChildDiv.append(countryFlag,countryName);
+    fourSection.append(fourChildDiv,category1,category2)
+
+    const fiveSection = document.createElement('div');
+    fiveSection.classList.add('five-section', 'flex-jsbetween')
+    const priceText = document.createElement('h2');
+    const plusBtn = document.createElement('div');
+
+    plusBtn.classList.add('plus-btn');
+
+    const plusIcon = document.createElement('i');
+    plusIcon.classList.add('fa-solid','fa-plus');
+    plusIcon.style.color = 'white'
+
+    plusBtn.append(plusIcon);
+
+    priceText.innerHTML = item.price;
+
+    fiveSection.append(priceText,plusBtn);
+
+
+
+
+    card.append(firstSection, secondSection, thirdSection,fourSection,fiveSection);
+
+    productCard.append(card);
+  })
+  mainContainer.append(productCard)
 }
 
+// Sort Filter
+
+const sortFilter = document.querySelector('.sort__featured-select');
+
+sortFilter.addEventListener('change',()=>{
+  // alert(sortFilter.value)
+
+  let selected = sortFilter.value;
+
+  if(selected === 'low-to-high'){
+      fetchData(productUrl,`_sort=price&_order=asc`)
+  }else if(selected === 'high-to-low'){
+    fetchData(productUrl,`_sort=price&_order=desc`)
+  }
+})
+
+const filterBtn = document.querySelector('.filterButtons');
+const filterContainer = document.querySelector('.filter__container');
+
+filterBtn.addEventListener('click',()=>{
+  filterContainer.classList.toggle('hide');
+})

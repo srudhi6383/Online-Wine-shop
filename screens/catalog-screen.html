@@ -37,8 +37,14 @@
     <div class="container">
       <h1>Catalog</h1>
       <!-- ==================== START OF CONTENT CONTAINER =================== -->
-
+      <div class="filterButtons">
+       
+          Filters
+       
+      </div>
       <div class="content__container">
+     
+       
         <!-- ==================== START OF FILTER =================== -->
         <div class="filter__container">
           <div class="filter__heading">
@@ -46,95 +52,119 @@
           </div>
 
           <!-- =========== start price ========== -->
-          <div class="filter__price flex-jsbetween filter-div">
-            <span>Price</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__price flex-jsbetween filter-div">
+              <span>Price</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div price_list hide" id="priceList"></ul>
           </div>
-          <ul class="filter-div price_list hide" id="priceList"></ul>
           <!-- =========== end price ========== -->
 
           <!-- =========== start category ========== -->
-          <div class="filter__category filter-div flex-jsbetween">
-            <span>Catagory</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__category filter-div flex-jsbetween">
+              <span>Catagory</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div category-list hide" id="categoryList"></ul>
           </div>
-          <ul class="filter-div category-list hide" id="categoryList"></ul>
           <!-- =========== end category ========== -->
 
           <!-- =========== start Type ============ -->
-          <div class="filter__type filter-div flex-jsbetween">
-            <span>Type</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__type filter-div flex-jsbetween">
+              <span>Type</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div type-list hide" id="typeList"></ul>
           </div>
-          <ul class="filter-div type-list hide" id="typeList"></ul>
           <!-- =========== end Type ============ -->
 
           <!-- =========== start body ============ -->
-          <div class="filter__body filter-div flex-jsbetween">
-            <span>Body</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__body filter-div flex-jsbetween">
+              <span>Body</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div body-list hide" id="bodyList"></ul>
           </div>
-          <ul class="filter-div body-list hide" id="bodyList"></ul>
           <!-- =========== end body ============ -->
 
           <!-- =========== start rating ============ -->
-          <div class="filter__rating filter-div flex-jsbetween">
-            <span>Rating</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__rating filter-div flex-jsbetween">
+              <span>Rating</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div rating-list hide" id="ratingList"></ul>
           </div>
-          <ul class="filter-div rating-list hide" id="ratingList"></ul>
           <!-- =========== end rating ============ -->
 
           <!-- =========== start country ============ -->
-          <div class="filter__country filter-div flex-jsbetween">
-            <span>Country of origin</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__country filter-div flex-jsbetween">
+              <span>Country of origin</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div country-list hide" id="countryList"></ul>
           </div>
-          <ul class="filter-div country-list hide" id="countryList"></ul>
           <!-- =========== end country ============ -->
 
           <!-- =========== start brand ============ -->
-          <div class="filter__brand filter-div flex-jsbetween">
-            <span>Brand</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__brand filter-div flex-jsbetween">
+              <span>Brand</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div brand-list hide" id="brandList"></ul>
           </div>
-          <ul class="filter-div brand-list hide" id="brandList"></ul>
           <!-- =========== end brand ============ -->
 
           <!-- =========== start region ============ -->
-          <div class="filter__region filter-div flex-jsbetween">
-            <span>Region</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__region filter-div flex-jsbetween">
+              <span>Region</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div region-list hide" id="regionList"></ul>
           </div>
-          <ul class="filter-div region-list hide" id="regionList"></ul>
           <!-- =========== end region ============ -->
 
           <!-- =========== start Grape Varitry ============ -->
-          <div class="filter__grape filter-div flex-jsbetween">
-            <span>Grape varitry</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__grape filter-div flex-jsbetween">
+              <span>Grape varitry</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div grape-list hide" id="grapeList"></ul>
           </div>
-          <ul class="filter-div grape-list hide" id="grapeList"></ul>
           <!-- =========== end Grape Varitry ============ -->
 
           <!-- =========== start Vintage Year ============ -->
-          <div class="filter__vintage-year filter-div flex-jsbetween">
-            <span>Vintage year</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__vintage-year filter-div flex-jsbetween">
+              <span>Vintage year</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul
+              class="filter-div vintage-year-list hide"
+              id="vintage-yearList"
+            ></ul>
           </div>
-          <ul
-            class="filter-div vintage-year-list hide"
-            id="vintage-yearList"
-          ></ul>
           <!-- =========== end Vintage Year ============ -->
 
           <!-- =========== start Size ============ -->
-          <div class="filter__size filter-div flex-jsbetween">
-            <span>Size</span>
-            <i class="uil uil-plus"></i>
+          <div>
+            <div class="filter__size filter-div flex-jsbetween">
+              <span>Size</span>
+              <i class="uil uil-plus"></i>
+            </div>
+            <ul class="filter-div size-list hide" id="sizeList"></ul>
           </div>
-          <ul class="filter-div size-list hide" id="sizeList"></ul>
           <!-- =========== end Size ============ -->
+
+          <div class="space"></div>
         </div>
         <!-- ==================== EDN OF FILTER =================== -->
 
@@ -143,22 +173,21 @@
         <div class="product__container">
           <!-- =============== First Section ==============  -->
           <div class="fist__container">
-            <p class="total__product">25 results</p>
+            <p class="total__product"><span>25</span> results</p>
             <span class="sort__featured"
               >Sort by:
 
               <select class="sort__featured-select">
                 <option value="">FEATURED</option>
-                <option value="popular">Popular</option>
                 <option value="low-to-high">Low To High</option>
                 <option value="high-to-low">High To Low</option>
-                <option value="rating-average">Average Rating</option>
+                <!-- <option value="rating-average">Average Rating</option> -->
               </select>
             </span>
           </div>
           <!-- =============== Second Section ==============  -->
           <div class="second__container">
-            <button>
+            <!-- <button>
               Red Wine
               <i class="uil uil-multiply"></i>
             </button>
@@ -171,15 +200,12 @@
               <i class="uil uil-multiply"></i>
             </button>
             <a href="#">Clear filters</a>
-            <i class=""></i>
+            <i class=""></i> -->
           </div>
 
           <div class="products__container">
             <div class="products">
-
-
-
-              <div class="product">
+              <!-- <div class="product">
 
                 <div class="first-section">
                   <div>
@@ -192,12 +218,10 @@
                     <i class="fa-regular fa-heart"></i>
                   </div>
                  
-                </div>
+                </div> -->
 
-
-
-                <!-- =============== Image ============== -->
-                <div class="second-section">
+              <!-- =============== Image ============== -->
+              <!-- <div class="second-section">
                   <div class="product-image">
                     <img src="/images/chenin_blanc.jpeg" alt="">
                   </div>
@@ -236,9 +260,7 @@
                 <div class="first-section">
                   <i class="fa-solid fa-star"></i>
                 </div>
-              </div>
-
-
+              </div> -->
             </div>
           </div>
         </div>

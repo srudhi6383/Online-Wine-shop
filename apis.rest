@@ -1,1 +1,1 @@
-GET http://localhost:3000/products?body=Light
+GET http://localhost:3000/products?images
