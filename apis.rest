@@ -1,14 +1,1 @@
-GET http://localhost:3000/posts
-
-###
-POST http://localhost:3000/posts
-Content-Type: application/json
-
-{
-     "id":786,
-     "title":"own server",
-     "author":"salman"
-}
-
-###
-DELETE http://localhost:3000/posts/1
+GET http://localhost:3000/products?images

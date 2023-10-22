@@ -2,6 +2,8 @@ import navbar from "./header.js";
 let navbarDiv = document.getElementById("header");
 navbarDiv.innerHTML = navbar();
 
+
+
 document.getElementById("get-mail").addEventListener("click", overlaymsg);
 const newsletter_emails = [];
 

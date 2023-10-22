@@ -15,7 +15,7 @@ function payment(event) {
     } else if (new Date(exp_date) < new Date()) {
         alert("Your card has expired");
     } else {
-        var otp = prompt("Please enter OTP: ");
+        var otp = prompt("Please enter OTP: 1234 ");
         if (otp === "1234") {
             window.location.href = "thankyou.html";
             alert("Payment is successful");

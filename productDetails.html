@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/productDetails.css">
+    <link rel="stylesheet" href="./CSS/header.css"/>
+    <link rel="stylesheet" href="./CSS/footer.css"/>
+    <title>Product Details | Page</title>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <div id="container">
+        <h1 id="nameHeading"></h1>
+        <div id="allProdDetails">
+            <div id="prodImgDiv"></div>
+            <div id="prodDetails">
+                <div id="rate-stock-fav">
+                    <div id="ratingDiv"></div>
+                    <div id="instockDiv">In stock</div>
+                    <div id="favouritesDiv"></div>
+                </div>
+                <div>
+                    <div id="aboutProd">
+                        <div id="colorDiv"></div>
+                        <div id="typeDiv"></div>
+                        <div id="alcoholDiv"></div>
+                        <div id="regionDiv"></div>
+                        <div id="countryDiv"></div>
+                    </div>
+                    <div id="description"></div>
+                    <div id="bottle-button">
+                        <button>0.75 L</button>
+                        <p id="quantityDiv"></p>
+                    </div>
+                </div>
+                <div id="paymentDiv">
+                    <div id="priceDiv"></div>
+                    <div id="cartDiv"><button>Add to cart</button></div>
+                    <div id="quickOrderDiv" onclick="window.location.href = 'cart.html';""><button>Quick order</button></div>
+                </div>
+                <div id="standards">
+                    <div>
+                        <p>⛟ <br> Free delivery <br> over $1000</p>
+
+                    </div>
+                    <div>
+                        <p>🟡 <br>180 points<br> on this purchase</p>
+
+                    </div>
+                    <div>
+                        <p>🍾 <br>More bottles<br> less price</p>
+
+                    </div>
+                    <div>
+                        <p>➯ <br>Sending on<br> the same day</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="moreAboutWine">
+            <div>
+                <h2>More about wine</h2>
+            </div>
+            <div id="toggleRating">+</div>
+        </div>
+        <div id="mbwSubDiv">
+            <div id="para-table">
+                <div id="para">
+                    <p>The Sonoma Coast's rocky, well drained terrain and elevated proximity to
+                        the cool Pacific Ocean allow us to grow Pinot Noir grapes with fresh,
+                        bright red fruit, complex minerality, and coastal acidity. Inviting and
+                        expressive aromas of bright red cherry, and raspberry are combined with
+                        hints of savory ground clove spice and graham cracker. Nuances of
+                        graphite and sea salt bring another dimension that come together with a
+                        bright acidity driving a long, lively finish.</p>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Light</td>
+                            <td>🔴🔴🔴⚪⚪</td>
+                            <td>Full</td>
+                        </tr>
+                        <tr>
+                            <td>Smooth</td>
+                            <td>🔴🔴⚪⚪⚪</td>
+                            <td>Tannic</td>
+                        </tr>
+                        <tr>
+                            <td>Soft</td>
+                            <td>🔴🔴🔴🔴⚪</td>
+                            <td>Acidic</td>
+                        </tr>
+                        <tr>
+                            <td>Dry</td>
+                            <td>🔴⚪⚪⚪⚪</td>
+                            <td>Sweet</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <div id="temp-age">
+                    <h3>Serving temperature:</h3>
+                    <p>15-17°C</p>
+                </div>
+                <div>
+                    <h3>Aging:</h3>
+                    <p>Aged 10 months in barrel in French oak</p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h3>Food pairing:</h3>
+                    <div id="foodItems">
+                        <div id="fi1">Cured meats</div>
+                        <div id="fi2">Duck</div>
+                        <div id="fi3">Fish</div>
+                        <div id="fi4">Lamb</div>
+                        <div id="fi5">Pasta</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Appellation:</h3>
+                    <p>Sonoma Coast</p>
+                </div>
+            </div>
+        </div>
+        <div id="random">
+            <h2>You may like</h2>
+            <div id="randonProducts"></div>  
+            <div id="view-div"><button id="viewAllBtn">View All   ⟶</button></div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script type="module" src="./JS/importedHeader.js"></script>
+    <script type="module" src="./JS/productDetails.js"></script>
+</body>
+
+</html>

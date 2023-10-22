@@ -1,0 +1,43 @@
+:root{
+     --color-bg: #FFF8E9;
+     --color-red: #BF0D12;
+     --color-black: #1E1E1E;
+     --color-white: #fff;
+     --color-gray: rgb(128, 128, 128);
+     --color-success: green;
+     --color-bBlack: #04364A;
+     --transition: all 400ms ease
+}
+.container{
+     width: 95%;
+     margin: auto;
+     margin-top: 1rem;
+}
+
+h1{
+     font-size: 2.8rem;
+     font-weight: 900;
+}
+a{
+     color: var(--color-black);
+}
+.filter-div{
+     padding: 1.5rem 0;
+     border-bottom: 1px solid gray;
+     width: 85%;
+     margin: auto;
+}
+.flex-jsbetween{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.flex-jsbetween span{
+     font-weight: 600;
+}
+.flex-jsbetween i{
+     font-size: 1.2rem;
+}
+img{
+     width: 100%;
+}
