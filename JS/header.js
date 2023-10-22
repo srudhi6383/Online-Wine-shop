@@ -3,8 +3,8 @@ const navbar = () => {
     <div id="upper">
     <p id="content"><span id="ua">UA</span>|EN 0 800 123 456</p>
     <div id ="symbols">
-        <a class="logos" href="./signin.html"><i class="fa-regular fa-user"></i></i></a>
-        <a class="logos" href="./screens./catalog-screen.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
+        <a class="logos" href="./login.html"><i class="fa-regular fa-user"></i></i></a>
+        <a class="logos" href="./catalog-screen.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
         <a class="logos" href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
         <a class="logos" href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i></a>
     </div> 
@@ -15,12 +15,12 @@ const navbar = () => {
         <h2 onclick="window.location.href='./index.html';" style="cursor:pointer">Mine Wine</h2>
     </div>
     <div class="header-options-div">
-        <a href="./screens./catalog-screen.html"><p>RED</p></a>
-        <a href="./screens./catalog-screen.html"><p>WHITE</p></a>
-        <a href="./screens./catalog-screen.html"><p>ROSE</p></a>
-        <a href="./screens./catalog-screen.html"><p>SPARKLING</p></a>
-        <a href="./screens./catalog-screen.html"><p>PROMOTIONS</p></a>
-        <a href="./screens./catalog-screen.html"><p>SETS & GIFTS</p></a>
+        <a href="./catalog-screen.html"><p>RED</p></a>
+        <a href="./catalog-screen.html"><p>WHITE</p></a>
+        <a href="./catalog-screen.html"><p>ROSE</p></a>
+        <a href="./catalog-screen.html"><p>SPARKLING</p></a>
+        <a href="./catalog-screen.html"><p>PROMOTIONS</p></a>
+        <a href="./catalog-screen.html"><p>SETS & GIFTS</p></a>
     </div>
     <div class="start-typing-to-search">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -29,12 +29,12 @@ const navbar = () => {
 </div>
 <hr id="hr">
 <div class="header-options-div-two">
-    <a href="./screens./catalog-screen.html""><p>RED</p></a>
-    <a href="./screens./catalog-screen.html""><p>WHITE</p></a>
-    <a href="./screens./catalog-screen.html""><p>ROSE</p></a>
-    <a href="./screens./catalog-screen.html""><p>SPARKLING</p></a>
-    <a href="./screens./catalog-screen.html""><p>PROMOTIONS</p></a>
-    <a href="./screens./catalog-screen.html""><p>SETS & GIFTS</p></a>
+    <a href="./catalog-screen.html""><p>RED</p></a>
+    <a href="./catalog-screen.html""><p>WHITE</p></a>
+    <a href="./catalog-screen.html""><p>ROSE</p></a>
+    <a href="./catalog-screen.html""><p>SPARKLING</p></a>
+    <a href="./catalog-screen.html""><p>PROMOTIONS</p></a>
+    <a href="./catalog-screen.html""><p>SETS & GIFTS</p></a>
 </div>
 <hr id="hr" class="invisible-hr">
  `

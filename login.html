@@ -2,18 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./CSS/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/footer.css" />
+    <link rel="stylesheet" href="./CSS/header.css"/>
   </head>
+  <header id="header"></header>
   <body>
+   
     <div>
       <h1>Welcome to the world of Wines!</h1>
       <div id="login_container">
@@ -31,10 +36,10 @@
           <form id="loginForm" autocomplete="off">
             <div id="picture">
               <div>
-                <img src="./LoginImages/facebook.png" alt="facebook" />
+                <img src="./Assets/facebook.png" alt="facebook" />
               </div>
               <div id="googleAuth">
-                <img src="./LoginImages/google.jpg" alt="Google" />
+                <img src="./Assets//google.jpg" alt="Google" />
               </div>
             </div>
             <input type="email" placeholder="Enter Your Email" id="email" />
@@ -126,5 +131,7 @@
     <!-- footer ends here -->
   </body>
   <!-- <script src="./footer.js" type="module"></script> -->
-  <script src="./login.js" type="module"></script>
+  <script src="./JS/login.js" type="module"></script>
+  <script  type="module" src="./JS/header.js"></script>
+  <script  type="module" src="./JS/importedHeader.js"></script>
 </html>

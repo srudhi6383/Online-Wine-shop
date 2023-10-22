@@ -1,9 +1,10 @@
 import { fetchData } from "./product.js";
 import { toggleHide, toggleCheckbox, filterItemsClicked } from "./utils.js";
 
-let baseServerUrl = `http://localhost:3000`;
-let productUrl = `${baseServerUrl}/products`;
+// let baseServerUrl = `http://localhost:3000`;
+// let productUrl = `${baseServerUrl}/products`;
 
+//Local Server(command)    ==   Online server(API)
 
 
 

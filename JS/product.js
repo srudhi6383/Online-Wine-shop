@@ -2,11 +2,11 @@
 import { createFilterFunction } from "./utils.js";
 
 let baseServerUrl = `http://localhost:3000`;
-let productUrl = `${baseServerUrl}/products`;
+let productUrl = `https://wild-ruby-beaver-tux.cyclic.cloud/products`;
 
 fetchData(productUrl,``);
 const totalProduct = document.querySelector('.total__product span')
-
+console.log(productUrl);
 
 export async function fetchData(apiUrl, quaryString) {
   try {
@@ -250,7 +250,7 @@ function createCards(data) {
     countryName.innerHTML = item.countryOfOrigin
     category1.innerHTML = item.type;
     category2.innerHTML = "Dry";
-
+    console.log(item)
     fourChildDiv.append(countryFlag,countryName);
     fourSection.append(fourChildDiv,category1,category2)
 
@@ -303,3 +303,20 @@ const filterContainer = document.querySelector('.filter__container');
 filterBtn.addEventListener('click',()=>{
   filterContainer.classList.toggle('hide');
 })
+// add to cart functionality
+var cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(wine) {
+  var isWinePresent = cartProduct.some(function (item) {
+    return item.id === wine.id;
+  });
+
+  if (!isWinePresent) {
+    let obj = { ...wine, qty: 1 };
+    cartProduct.push(obj);
+    localStorage.setItem("cart", JSON.stringify(cartProduct));
+    alert("Wine added to the cart.");
+  } else {
+    alert("This Wine is already present in the cart.");
+  }
+}

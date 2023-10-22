@@ -97,7 +97,7 @@ toggleButtons.addEventListener('click', function () {
 main();
 
 function main() {
-    let url = `https://wine-api.onrender.com/wines`;
+    let url = `https://wild-ruby-beaver-tux.cyclic.cloud/products`;
     let data = getData(url);
 }
 async function getData(url) {
@@ -214,7 +214,7 @@ function addToFav(wine, btn) {
         // updateHeartColor(true, btn);
     }
 }
-//updating herat btn color on adding it to favourites.
+//updating heart btn color on adding it to favourites.
 function updateHeartColor(wine, btn) {
     const heartIcon = btn.querySelector("i");
     if (heartIcon) {
@@ -250,5 +250,5 @@ quickOrderBtn.addEventListener("click", ()=>{
 
 let viewAll= document.getElementById("viewAllBtn");
 viewAll.addEventListener("click", ()=>{
-    window.location.href="./screens/catalog-screen.html"
+    window.location.href="./catalog-screen.html"
 })

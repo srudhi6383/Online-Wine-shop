@@ -1,4 +1,4 @@
-import footerAdd from "../footer.js";
+import footerAdd from "./footer.js";
 //------------------------FireBase (Don not touch)------------------------>>
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
 import {

@@ -1,6 +1,6 @@
 const signOutBtn = document.getElementById("signout-btn");
 signOutBtn.addEventListener("click",()=>{
-      window.location.href="./signUp.html"
+      window.location.href="./login.html"
 })
 
 
