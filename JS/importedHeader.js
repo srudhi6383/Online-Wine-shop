@@ -2,6 +2,10 @@ import navbar from "./header.js";
 let navbarDiv = document.getElementById("header");
 navbarDiv.innerHTML = navbar();
 
+import footer from "./footer.js";
+let footerDiv = document.getElementById("footer");
+footerDiv.innerHTML = footer();
+
 document.getElementById("get-mail").addEventListener("click", overlaymsg);
 const newsletter_emails = [];
 
