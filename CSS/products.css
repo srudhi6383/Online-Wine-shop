@@ -1,0 +1,228 @@
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+}
+
+/* -------------------------------------------------------------------------font awesome CSS */
+.fa-solid {
+    font-size: small;
+}
+
+.fa-heart {
+    font-size: large;
+}
+
+
+/* ----------------------------------------------------------------------------main div CSS-- */
+#container {
+    border: 1px solid black;
+    display: flex;
+    gap: 5%;
+    padding: 25px;
+}
+
+/* -----------------------------------------------------------------------------div 1 CSS--- */
+#div1 {
+    border: 1px solid black;
+    width: 22%;
+    padding: 20px;
+    column-rule-color: black;
+}
+
+.sub-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.options input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+.options {
+    display: none;
+    border-bottom: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.sub-filters div+div {
+    font-size: x-large;
+}
+
+.sub-filters div+div:hover {
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------------div 2 CSS-------- */
+#displayProductsDiv {
+    width: 78%;
+}
+
+#sortMainDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    margin-left: 5px;
+}
+
+#sortMainDiv button {
+    border: none;
+    border-left: 1px solid black;
+    font-size: medium;
+    background-color: #fff8e9;
+    /* margin-right: 5px; */
+    padding: 7px 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+#sortMainDiv button:hover {
+    cursor: pointer;
+}
+
+#div2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 5px;
+}
+
+#div2>div {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.42);
+    padding: 15px;
+}
+
+#div2 img {
+    width: 100%;
+    height: 280px;
+    margin-bottom: -16px;
+}
+
+/* ----------------------------------------------------------------------------JS displaydata CSS */
+
+.card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.card1 button {
+    border: none;
+    font-size: medium;
+    background-color: #fff8e9;
+}
+
+.card1 button:hover {
+    cursor: pointer;
+}
+
+.card2 {
+    text-align: center;
+}
+
+.card2 img:hover {
+    transform: scale(1.1);
+}
+
+.card3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: grey;
+    font-size: smaller;
+    font-weight: 800;
+    margin-top: -25px;
+    margin-bottom: -10px;
+    border-bottom: 1px solid black;
+}
+
+.card4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    font-size: large;
+}
+
+.card4 button {
+    border: 1px solid #bf0d12;
+    color: #bf0d12;
+    align-items: center;
+    font-size: large;
+    background-color: #fff8e9;
+
+}
+
+.card4 button:hover {
+    cursor: pointer;
+}
+
+/* pagination */
+#pagination {
+    border-radius: 4px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+#pagination button {
+    padding: 15px;
+    background-color: #fff8e9;
+    margin-left: 5px;
+    border: 1px solid grey;
+}
+
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:900px) {
+    #div2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* margin: auto; */
+    }
+
+}
+@media only screen and (max-width:700px) {
+    #container {
+        gap: 2%;
+        padding: 5px;
+    }
+    #div1{
+        /* display: none; */
+    }
+    #displayProductsDiv {
+        width: 100%;
+    } 
+
+    #div2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+    }
+    .sub-filters div+div {
+        font-size: medium;
+    }
+    .options {
+        font-size: small;
+        letter-spacing: -1.5px;
+    }
+    .fa-solid {
+        font-size: xx-small;
+    }
+    .sub-filters {
+        font-size: 10px;
+    }
+   
+}

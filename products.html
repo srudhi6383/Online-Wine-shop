@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/products.css">
+    <link rel="stylesheet" href="./CSS/header.css"/>
+    <link rel="stylesheet" href="./CSS/footer.css"/>
+    <title>Products | Wine</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="container">
+        <div id="div1">
+            <h2>Filters </h2>
+            <div class="sub-filters">
+                <div>
+                    <h3>Price</h3>
+                </div>
+                <div id="togglePrice">+</div>
+            </div>
+            <div id="price-options" class="options">
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?price_gte=0&price_lte=50" /> $0 -
+                $50<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?price_gte=51&price_lte=100" /> $51
+                - $100<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?price_gte=101&price_lte=200" />
+                $101 - $200<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?price_gte=200" /> More than
+                $200<br />
+            </div>
+            <div class="sub-filters">
+                <div>
+                    <h3>Category</h3>
+                </div>
+                <div id="toggleCategory">+</div>
+            </div>
+            <div id="category-options" class="options">
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Red" /> Red Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=White" /> White Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Rose" /> Rose Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Sparkling" /> Sparkling
+                Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Sets%20and%20Gifts" /> Sets &
+                Gifts<br />
+            </div>
+
+            <div class="sub-filters">
+                <div>
+                    <h3>Rating</h3>
+                </div>
+                <div id="toggleRating">+</div>
+            </div>
+
+            <div id="rating-options" class="options">
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?rating_gte=5" /> <i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-sharp fa-solid fa-star"></i> <br>
+
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?rating_gte=4.5&rating_lte=4.9" />
+                <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-solid fa-star-half-stroke"></i><br>
+
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?rating_gte=4&rating_lte=4.4" /> <i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></i><br>
+
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?rating_lte=4" /> <i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i
+                    class="fa-sharp fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <br>
+
+            </div>
+
+            <div class="sub-filters">
+                <div>
+                    <h3>Country of Origin</h3>
+                </div>
+                <div id="togglePrice">+</div>
+            </div>
+
+            <div id="country-options" class="options">
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20States" /> United
+                States <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Germany" /> Germany <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=France" /> France <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Italy" /> Italy <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Argentina" /> Argentina
+                <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=New%20Zealand" /> New
+                Zealand <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Spain" /> Spain <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Austria" /> Austria <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=South%20Africa" /> South
+                Africa <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20Kingdom" /> United
+                Kingdom <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Greece" /> Greece <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Chile" /> Chile <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Australia" /> Australia
+                <br />
+            </div>
+            <div class="sub-filters">
+                <div>
+                    <h3>Year</h3>
+                </div>
+                <div id="toggleYear">+</div>
+            </div>
+            <div id="year-options" class="options">
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_lte=2010" /> Before 2010
+                <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2011&year_lte=2015" />
+                2011-2015 <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2016&year_lte=2020" />
+                2016-2020 <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2020" /> After 2020 <br />
+            </div>
+        </div>
+
+        <div id="displayProductsDiv">
+            <div id="sortMainDiv">
+                <!-- <button id="fiterBy">Filter</button> -->
+                <button id="lthSort">Sort ↑</button>
+                <button id="htlSort">Sort ↓</button>
+            </div>
+            <div id="div2"></div>
+            <div id="pagination" class="pagination-wrapper"></div>
+        </div>
+
+    </div>
+    <div id="wrapper"></div>
+    <script type="module" src="./JS/importedHeader.js"></script>
+    <script type="module" src="./JS/products.js"></script>
+</body>
+
+</html>
