@@ -1,0 +1,145 @@
+body {
+  font-family: "PT Mono", monospace;
+  background-color: rgb(255, 248, 233);
+}
+#login_container {
+  /* border: 1px solid red; */
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  padding-bottom: 70px;
+  /* background-color: rgb(255, 248, 233); */
+}
+#left_img {
+  background-image: url("https://blog.thewinepark.com/wp-content/uploads/2022/12/wine-style-blog-opener.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#login_container img {
+  width: 100%;
+}
+.loginMainDiv {
+  /* border: 1px sold red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px; */
+}
+
+#picture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 100%;
+  gap: 10px;
+  /* margin: auto; */
+}
+#picture img {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+body > div > h1 {
+  text-align: center;
+  color: rgb(31, 30, 31);
+}
+.loginMainDiv > p {
+  text-align: center;
+}
+
+#loginForm {
+  display: grid;
+  grid-template-rows: repeat(1, fr);
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+}
+
+#loginForm > input {
+  padding: 10px;
+  border: 1px solid rgb(210, 207, 207);
+}
+#loginForm > button {
+  padding: 10px;
+  border: 1px solid rgb(210, 207, 207);
+}
+
+.createAccount {
+  color: rgb(83, 84, 84);
+  cursor: pointer;
+}
+#para {
+  margin-top: 0px;
+}
+
+.signUpMainDiv {
+  display: none;
+}
+.signUpMainDiv h2 {
+  text-align: center;
+}
+.signUpMainDiv form {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+}
+#form2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+#form2 input {
+  padding: 10px;
+  /* border-radius: 5px; */
+  border: 1px solid rgb(210, 207, 207);
+}
+#form2 button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 207, 207);
+  cursor: pointer;
+}
+#loginForm > button:hover,
+#form2 button:hover {
+  background-color: rgb(236, 234, 234);
+}
+
+.child {
+  margin-bottom: 20px;
+}
+/* .signUpMainDiv form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+} */
+.goToLogin {
+  cursor: pointer;
+}
+
+.account_create {
+  text-align: center;
+}
+
+.goToLogin:hover {
+  color: gray;
+}
+@media screen and (width<1000px) {
+  #login_container {
+    grid-template-columns: repeat(1, 1fr);
+    /* border: 1px solid red; */
+  }
+  #login_container > div:first-child {
+    display: none;
+  }
+  #login_container > div:nth-child(2) {
+    max-width: 600px;
+    margin: auto;
+  }
+}

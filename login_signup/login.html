@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../footer.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Welcome to the world of Wines!</h1>
+      <div id="login_container">
+        <div id="left_img">
+          <!-- <img
+            src="https://blog.thewinepark.com/wp-content/uploads/2022/12/wine-style-blog-opener.jpg"
+            alt="welcomeimg"
+          /> -->
+        </div>
+
+        <div class="loginMainDiv">
+          <h1>Mine Wine</h1>
+          <p>Welcome back! Sign in with</p>
+
+          <form id="loginForm" autocomplete="off">
+            <div id="picture">
+              <div>
+                <img src="./LoginImages/facebook.png" alt="facebook" />
+              </div>
+              <div id="googleAuth">
+                <img src="./LoginImages/google.jpg" alt="Google" />
+              </div>
+            </div>
+            <input type="email" placeholder="Enter Your Email" id="email" />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+            />
+            <button type="submit">SIGN IN</button>
+          </form>
+          <p>Forgot password</p>
+          <p id="para">
+            New here? <span class="createAccount">Create an account</span>
+          </p>
+        </div>
+
+        <div class="signUpMainDiv">
+          <h2>Sign up here</h2>
+
+          <form id="form2" autocomplete="off">
+            <div class="child">
+              <!-- <label for="username">* Full Name</label> -->
+              <input
+                type="text"
+                id="username"
+                required=""
+                placeholder="Enter your Full Name"
+              />
+            </div>
+
+            <div class="child">
+              <!-- <label for="email">* Email address</label> -->
+              <input
+                type="email"
+                id="email2"
+                class="email"
+                required=""
+                placeholder="Enter your Email address"
+              />
+            </div>
+
+            <div class="child">
+              <!-- <label for="password">* Password</label> -->
+              <input
+                type="password"
+                id="password2"
+                required=""
+                placeholder="Enter your Password"
+              />
+            </div>
+
+            <div class="child">
+              <!-- <label for="confirmpassword">* Confirm Password</label> -->
+              <input
+                type="password"
+                id="confirmpassword2"
+                class="password"
+                required=""
+                placeholder="Enter your Confirm Password"
+              />
+            </div>
+
+            <div class="child">
+              <!-- <label for="phone">* Phone Number<span>(Optional)</span></label> -->
+              <input
+                type="number"
+                id="number"
+                placeholder=" Enter your Phone Number"
+              />
+            </div>
+
+            <div class="child">
+              <button class="btn" type="submit" id="signup_by_email">
+                SIGN UP
+              </button>
+            </div>
+
+            <p class="account_create">
+              Already a user?
+              <span class="goToLogin"> Login </span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer starts here -->
+    <div id="wrapper"></div>
+    <!-- footer ends here -->
+  </body>
+  <!-- <script src="./footer.js" type="module"></script> -->
+  <script src="./login.js" type="module"></script>
+</html>
