@@ -1,0 +1,62 @@
+body {
+  font-family: "PT Mono", monospace;
+  background-color: rgb(255, 248, 233);
+}
+
+#bottom > #main {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  gap: 15px;
+  padding: 15px;
+  font-size: 10px;
+  max-width: 1280px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.lastFooterDiv {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lastFooterDiv h1 {
+  font-size: 5rem;
+  padding: 5px 0;
+  margin: 0;
+  font-weight: 900;
+}
+@media screen and (width<850px) {
+  .lastFooterDiv h1 {
+    font-size: 3.5rem;
+  }
+  .lastFooterDiv p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (width<600px) {
+  .lastFooterDiv h1 {
+    font-size: 2.5rem;
+  }
+  .lastFooterDiv p {
+    font-size: 0.65rem;
+  }
+}
+@media screen and (width<500px) {
+  .lastFooterDiv {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .lastFooterDiv h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .lastFooterDiv p {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
