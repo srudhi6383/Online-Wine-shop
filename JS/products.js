@@ -3,7 +3,7 @@ main();
 
 
 function main() {
-  let url = `https://wine-api.onrender.com/wines`;
+  let url = ``;
   let data = getData(url);
 }
 async function getData(url) {
