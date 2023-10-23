@@ -97,7 +97,7 @@ toggleButtons.addEventListener('click', function () {
 main();
 
 function main() {
-    let url = `https://wild-ruby-beaver-tux.cyclic.cloud/products`;
+    let url = `https://mock-api-template-wocn.onrender.com/wines`;
     let data = getData(url);
 }
 async function getData(url) {
