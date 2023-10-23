@@ -1,99 +1,107 @@
 # Online-Wine-shop
 
+WineShop Website
 
-I want to create an website name Online Wine Shop
+This is an online wine shop website project built using HTML, CSS, and JavaScript.
 
-But i don't know how many types of wine are?
+## Table of Contents
 
-i want you to create a table.
+- [Description](#description)
+- [Technologies Used](#technologies-used)
+- [Pages](#pages)
 
-Wine name: should be valid 
-Location : should be valid
-Price : price randomly
-rating: Rating randomly
-Type: Brut,Dry,Semi-dry,semi-sweet,Sweet
-Category: Red Wine,White Wine,Rose Wine, Sparking Wine, Wine sets
-status: new, sale or ""
-
-length of the table should be 25 row first then i give an istruction give more you need to give me more rows
+  
 
 
-I want to create an website name Online Wine Shop
+## Description
 
-But i don't know how many types of wine are?
+The WineShop website is an online platform for wine enthusiasts to browse, purchase, and explore a wide variety of wine products. It offers user registration and login, a product catalog, product details, a shopping cart, and a checkout process.
 
-i want you to create a table.
+## Technologies Used
 
-Wine name: should be valid wineName=[];
-Location : should be valid location=[];
-Price : price randomly price=[];
-rating: Rating randomly rating=[];
-Type: Brut,Dry,Semi-dry,semi-sweet,Sweet type=[];
-Category: Red Wine,White Wine,Rose Wine, Sparking Wine, Wine sets Category=[];
-status: new, sale or "" status=[];
-
-Give me the same ouput in the form of array in js
-
-length of the table should be 25 row first then i give an istruction give more you need to give me more rows
-
-{
-{
-     "id":1,
-     "productCode":32146,
-     "status": "New",
-     "compare":"uil-balance-scale",
-     "favorites":"uil-heart-alt",
-     "rating":"4.7",
-     "image":"",
-     "hoverImage":"",
-     "name":"Chardonnay Classic",
-     "palceIcon":"",
-     "location":"California, USA",
-     "category":"Red",
-     "type":"Dry",
-     "price":"$15",
-     "plusBtn":"uil-plus"
-},
-{
-     "id":1,
-     "productCode":32146,
-     "status": "New",
-     "compare":"uil-balance-scale",
-     "favorites":"uil-heart-alt",
-     "rating":"4.7",
-     "image":"",
-     "hoverImage":"",
-     "name":"Chardonnay Classic",
-     "palceIcon":"",
-     "location":"California, USA",
-     "category":"Red",
-     "type":"Dry",
-     "price":"$15",
-     "plusBtn":"uil-plus"
-}
-}
-
-Format is given to you.
-
-Note:
-
-ProductCode : is generated randomly 5 digit
-Id: 1 to wine.length
-image: ""
-hoverImage:""
-placeIcon: ""
-
-this thing you need to keep in mind
+- HTML
+- CSS
+- JavaScript
+- Firebase(for login page)
+- Google Authentication(for login)
 
 
-you have array you need to give me json data with the given keys. you need to fill data in the correct place 
-json data length should be wineName.length;
+## Pages
+### navbar
+![Screenshot 2023-10-23 131843](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/8a342ab8-3d57-4384-85ad-7db95f2bcc67)
 
- body = [Full, Light, Medium]
- countryOfOrign = take from locations and add only country like: California, USA to be USA 
- FoodPairing = Add Randomly 5 FoodPairing and repeat in all data
- Brand: add Randomly 5 Brand and repeat in all data
- Region: add Randomly 5 Region and repeat in all data
- GrapeVariety: add Randomly 5 Grape Variety and repeat in all data
- Vintage Year: add Randomly 5 Vintage Year and repeat in all data
- Size: add Randomly 5 Size Year and repeat in all data
+
+### 1. Login/Sign Up Page
+
+- Allows users to either log in to their existing accounts or sign up as new users.
+- User authentication is implemented using JavaScript.
+  ![Screenshot 2023-10-23 125842](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/61cc99eb-caa2-4ddb-88bf-84e81bd20947)
+  
+  ![Screenshot 2023-10-23 125853](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/81ba993e-ef67-4efc-974d-356fe26dbdaa)
+
+
+
+
+
+### 2. Home Page
+
+- Displays featured wine products and promotions.
+- Users can navigate to the product catalog from here.
+  ![Screenshot 2023-10-23 130003](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/62639334-7c11-455d-bc3d-5086df7ac16f)
+
+
+
+### 3. Product Page
+
+- Lists all available wine products.
+- Users can filter and search for specific wines.
+- Clicking on a product redirects to the product detail page.
+  ![Screenshot 2023-10-23 130124](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/c1e60cd1-f896-4ec6-a428-504a192d87ea)
+
+
+### 4. Product Detail Page
+
+- Displays detailed information about a specific wine product.
+- Users can add the product to their shopping cart from this page.
+  ![Screenshot 2023-10-23 130243](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/71616294-69dc-4c40-93b3-c7005d5d7f70)
+  
+  ![Screenshot 2023-10-23 130259](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/fbf7e77f-2550-4a3e-9706-dcc9fcec971a)
+
+
+
+### 5. Cart Page
+
+- Shows a summary of the items in the user's shopping cart.
+- Users can modify the quantity or remove items.
+- Provides a link to the checkout page.
+  ![Screenshot 2023-10-23 130330](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/00e536a3-4da9-4983-b226-5dfd19c68c35)
+
+
+### 6. Checkout Page
+
+- Allows users to complete their purchase by providing shipping and payment information.
+- The checkout process may involve validation and confirmation steps.
+  ![Screenshot 2023-10-23 130340](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/cf257711-6a57-4fe3-9820-4b26a50d70ac)
+
+
+
+### 7. Payment Page
+ -The Payment Page is a crucial part of the WineShop website, where users complete their purchase. It handles the transaction securely and efficiently.
+ ![Screenshot 2023-10-23 130600](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/6bbdd481-5e1c-4d91-8d4c-f8d67e675828)
+
+ ### Footer
+![Screenshot 2023-10-23 131904](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/9aebd949-5818-4a7e-beec-cb52fd4d63d9)
+
+
+ ### 8. Thank You Page
+  - The "Thank You" page is a critical part of the WineShop website, which is displayed to users after they have completed a purchase. It provides a confirmation message and relevant information to users.
+  ![Screenshot 2023-10-23 130732](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/b2c16c92-4903-444e-820d-184c21660125)
+
+
+### Contributors
+- Arti Soni - https://github.com/artisonii
+- Mohd Salman - https://github.com/Mohd-Salman-0119
+- Srudhi - https://github.com/srudhi6383
+
+### Deployed Link
+https://glowing-marigold-0b2a2a.netlify.app/
