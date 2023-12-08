@@ -1,4 +1,4 @@
-# Online-Wine-shop
+![Untitled](https://github.com/srudhi6383/Online-Wine-shop/assets/112762975/cca5498d-9488-4132-a3f6-e119ba7053aa)# Online-Wine-shop
 
 WineShop Website
 
@@ -47,9 +47,7 @@ The WineShop website is an online platform for wine enthusiasts to browse, purch
 
 - Displays featured wine products and promotions.
 - Users can navigate to the product catalog from here.
-  ![Screenshot 2023-10-23 130003](https://github.com/srudhi6383/Online-Wine-shop/assets/139768344/62639334-7c11-455d-bc3d-5086df7ac16f)
-
-
+![Untitled](https://github.com/srudhi6383/Online-Wine-shop/assets/112762975/d1049986-7c75-48f1-bbe9-9e21e8744d3d)
 
 ### 3. Product Page
 
