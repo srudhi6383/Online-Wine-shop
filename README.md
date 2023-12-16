@@ -1,8 +1,8 @@
 ![Untitled](https://github.com/srudhi6383/Online-Wine-shop/assets/112762975/cca5498d-9488-4132-a3f6-e119ba7053aa)# Online-Wine-shop
 
-WineShop Website
+## Wineshop Website 
 
-This is an online wine shop website project built using HTML, CSS, and JavaScript.
+This is an online wine shop website project built using HTML, CSS, JavaScript and Firebase. 
 
 ## Table of Contents
 
